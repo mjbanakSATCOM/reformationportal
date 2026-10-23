@@ -1,0 +1,197 @@
+/* Section scene plates + Luther chorale player */
+
+.edition-dark #timeline,
+.edition-dark #reformers,
+.edition-dark #puritans,
+.edition-dark #resources,
+.edition-dark #seminaries,
+.edition-dark #confessions,
+.edition-dark #youtube,
+.edition-dark #research,
+.edition-light #timeline,
+.edition-light #reformers,
+.edition-light #puritans,
+.edition-light #resources,
+.edition-light #seminaries,
+.edition-light #confessions,
+.edition-light #youtube,
+.edition-light #research {
+  position: relative;
+  isolation: isolate;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll;
+}
+
+.edition-dark #timeline {
+  background-image:
+    linear-gradient(180deg, rgba(16,19,30,0.84) 0%, rgba(16,19,30,0.90) 100%),
+    url('./assets/bg-timeline.jpg');
+}
+.edition-dark #reformers {
+  background-image:
+    linear-gradient(180deg, rgba(16,19,30,0.88) 0%, rgba(16,19,30,0.92) 100%),
+    url('./assets/bg-reformers.jpg');
+}
+.edition-dark #puritans {
+  background-image:
+    linear-gradient(180deg, rgba(16,19,30,0.82) 0%, rgba(16,19,30,0.88) 100%),
+    url('./assets/bg-puritans.jpg');
+}
+.edition-dark #resources {
+  background-image:
+    linear-gradient(180deg, rgba(16,19,30,0.86) 0%, rgba(16,19,30,0.90) 100%),
+    url('./assets/bg-resources.jpg');
+}
+.edition-dark #seminaries {
+  background-image:
+    linear-gradient(180deg, rgba(16,19,30,0.90) 0%, rgba(16,19,30,0.93) 100%),
+    url('./assets/bg-seminaries.jpg');
+}
+.edition-dark #confessions {
+  background-image:
+    linear-gradient(180deg, rgba(16,19,30,0.88) 0%, rgba(16,19,30,0.92) 100%),
+    url('./assets/bg-confessions.jpg');
+}
+.edition-dark #youtube {
+  background-image:
+    linear-gradient(180deg, rgba(16,19,30,0.86) 0%, rgba(16,19,30,0.90) 100%),
+    url('./assets/bg-youtube.jpg');
+}
+.edition-dark #research {
+  background-image:
+    linear-gradient(180deg, rgba(16,19,30,0.86) 0%, rgba(16,19,30,0.91) 100%),
+    url('./assets/bg-research.jpg');
+}
+
+.edition-light #timeline {
+  background-image:
+    linear-gradient(180deg, rgba(242,237,227,0.86) 0%, rgba(236,228,210,0.90) 100%),
+    url('./assets/bg-timeline.jpg');
+}
+.edition-light #reformers {
+  background-image:
+    linear-gradient(180deg, rgba(242,237,227,0.88) 0%, rgba(236,228,210,0.92) 100%),
+    url('./assets/bg-reformers.jpg');
+}
+.edition-light #puritans {
+  background-image:
+    linear-gradient(180deg, rgba(242,237,227,0.84) 0%, rgba(236,228,210,0.90) 100%),
+    url('./assets/bg-puritans.jpg');
+}
+.edition-light #resources {
+  background-image:
+    linear-gradient(180deg, rgba(242,237,227,0.86) 0%, rgba(236,228,210,0.90) 100%),
+    url('./assets/bg-resources.jpg');
+}
+.edition-light #seminaries {
+  background-image:
+    linear-gradient(180deg, rgba(242,237,227,0.90) 0%, rgba(236,228,210,0.93) 100%),
+    url('./assets/bg-seminaries.jpg');
+}
+.edition-light #confessions {
+  background-image:
+    linear-gradient(180deg, rgba(242,237,227,0.88) 0%, rgba(236,228,210,0.92) 100%),
+    url('./assets/bg-confessions.jpg');
+}
+.edition-light #youtube {
+  background-image:
+    linear-gradient(180deg, rgba(242,237,227,0.86) 0%, rgba(236,228,210,0.90) 100%),
+    url('./assets/bg-youtube.jpg');
+}
+.edition-light #research {
+  background-image:
+    linear-gradient(180deg, rgba(242,237,227,0.86) 0%, rgba(236,228,210,0.91) 100%),
+    url('./assets/bg-research.jpg');
+}
+
+/* Hymn player */
+.hymn-player {
+  position: fixed;
+  left: max(14px, env(safe-area-inset-left, 0px));
+  bottom: max(14px, env(safe-area-inset-bottom, 0px));
+  z-index: 240;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(340px, calc(100vw - 28px));
+  padding: 8px 12px 8px 8px;
+  border-radius: 999px;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.28);
+}
+.edition-dark .hymn-player {
+  background: rgba(18, 22, 36, 0.88);
+  border: 1px solid rgba(197, 162, 78, 0.38);
+  color: #f8ebb0;
+}
+.edition-light .hymn-player {
+  background: rgba(255, 254, 249, 0.92);
+  border: 1px solid rgba(160, 120, 50, 0.35);
+  color: #2c2010;
+}
+
+.hymn-player-btn {
+  flex: 0 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(197, 162, 78, 0.55);
+  background: linear-gradient(180deg, #e8c060, #c5a24e);
+  color: #1a1408;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  padding: 0;
+}
+.hymn-player-btn:focus-visible {
+  outline: 2px solid #edd98c;
+  outline-offset: 2px;
+}
+.hymn-player-btn svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+.hymn-player-btn .icon-pause { display: none; }
+.hymn-player.is-playing .icon-play { display: none; }
+.hymn-player.is-playing .icon-pause { display: block; }
+
+.hymn-player-meta {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.hymn-player-kicker {
+  font-family: Cinzel, serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+.hymn-player-title {
+  font-family: "EB Garamond", serif;
+  font-size: 0.82rem;
+  font-style: italic;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.edition-dark .hymn-player-title { color: #f8ebb0; }
+.edition-light .hymn-player-title { color: #5a4a30; }
+
+@media (max-width: 480px) {
+  .hymn-player {
+    max-width: calc(100vw - 24px);
+    padding: 7px 10px 7px 7px;
+  }
+  .hymn-player-title { font-size: 0.76rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hymn-player { backdrop-filter: none; }
+}

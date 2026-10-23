@@ -1,0 +1,117 @@
+/* ============================================================
+   BOOK MODAL — Light Theme Overrides
+   Imports base book-modal.css, then overrides colors/fonts
+   ============================================================ */
+@import url('./book-modal.css');
+
+/* ── Light palette overrides ────────────────────────── */
+:root {
+  --book-cover-dark:   #2c3356;
+  --book-cover-mid:    #3d4870;
+  --book-cover-light:  #4a5a8a;
+  --book-gold:         #b8922e;
+  --book-gold-bright:  #d4a83a;
+  --book-gold-dim:     #8a6a20;
+  --book-page:         #fdfaf4;
+  --book-page-dark:    #f5f0e4;
+  --book-ink:          #1a1a2e;
+  --book-ink-mid:      #2c3356;
+}
+
+/* ── Backdrop — lighter blur for airy feel ──────────── */
+.book-backdrop.is-open {
+  background: rgba(240, 238, 230, 0.75);
+  backdrop-filter: blur(14px) brightness(0.85) saturate(0.8);
+  -webkit-backdrop-filter: blur(14px) brightness(0.85) saturate(0.8);
+}
+
+/* ── Book shadow — softer for light theme ───────────── */
+.book {
+  box-shadow:
+    -6px 4px 30px rgba(44, 51, 86, 0.18),
+     4px 8px 50px rgba(44, 51, 86, 0.14),
+     0 0 0 1px rgba(184,146,46,0.2);
+}
+
+/* ── Spine ──────────────────────────────────────────── */
+.book-spine {
+  background: linear-gradient(180deg,
+    var(--book-cover-light) 0%,
+    var(--book-cover-dark) 40%,
+    #1e2647 60%,
+    var(--book-cover-dark) 100%
+  );
+}
+
+/* ── Pages ──────────────────────────────────────────── */
+.book-page-left,
+.book-page-right {
+  background: linear-gradient(160deg, #fdfaf4 0%, #f0ece0 100%);
+}
+
+/* ── Close button ───────────────────────────────────── */
+.book-close {
+  background: var(--book-cover-dark);
+  border-color: var(--book-gold);
+  color: var(--book-gold-bright);
+}
+.book-close:hover {
+  background: var(--book-gold);
+  color: var(--book-cover-dark);
+}
+
+/* ── Latin title — use Cormorant in light theme ─────── */
+.book-sola-latin {
+  font-family: 'Cormorant Garamond', 'IM Fell English', serif;
+  font-size: clamp(1.3rem, 2.3vw, 1.7rem);
+  color: var(--book-ink);
+}
+
+.book-sola-english {
+  color: var(--book-gold-dim);
+}
+
+.book-sola-icon {
+  color: var(--book-gold-dim);
+}
+
+/* ── Summary drop cap — slate blue in light theme ───── */
+.book-summary .drop-cap::first-letter {
+  color: var(--book-cover-dark);
+}
+
+/* ── Verse border — slate blue accent ───────────────── */
+.book-verse {
+  border-left-color: rgba(74, 90, 138, 0.3);
+}
+
+.verse-ref {
+  color: var(--book-cover-mid);
+}
+
+.verse-translation {
+  color: var(--book-gold-dim);
+}
+
+/* ── Spine title font ────────────────────────────────── */
+.spine-title {
+  font-family: 'Cormorant Garamond', 'IM Fell English', serif;
+  color: #d4c89a;
+}
+
+/* ── Summary and verse text ──────────────────────────── */
+.book-summary {
+  color: var(--book-ink);
+}
+
+.verse-text {
+  color: #1a1a2e;
+}
+
+/* ── Mote particles — blue in light theme ───────────── */
+/* (handled inline via JS — no override needed) */
+
+/* ── Section hint text ──────────────────────────────── */
+.section-desc [style*="Click any sola"] {
+  color: #6b8cba !important;
+}

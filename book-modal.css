@@ -1,0 +1,495 @@
+/* ============================================================
+   BOOK MODAL — Animated Scripture Book
+   Dark Theme variant (overrides for light theme in book-modal-light.css)
+   ============================================================ */
+
+/* ── Variables ─────────────────────────────────────── */
+:root {
+  --book-cover-dark:   #1a1208;
+  --book-cover-mid:    #2a1e0a;
+  --book-cover-light:  #3a2c12;
+  --book-gold:         #c5a24e;
+  --book-gold-bright:  #f0d080;
+  --book-gold-dim:     #8a6a28;
+  --book-page:         #f5eedc;
+  --book-page-dark:    #e8dfc8;
+  --book-ink:          #1a120a;
+  --book-ink-mid:      #3a2c1e;
+  --book-spine-w:      48px;
+  --book-open-w:       min(900px, 94vw);
+  --book-h:            min(620px, 85vh);
+  --ease-spring:       cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out:          cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Backdrop ──────────────────────────────────────── */
+.book-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(8, 6, 3, 0);
+  backdrop-filter: blur(0px) brightness(1);
+  -webkit-backdrop-filter: blur(0px) brightness(1);
+  transition: background 0.55s var(--ease-out),
+              backdrop-filter 0.55s var(--ease-out),
+              -webkit-backdrop-filter 0.55s var(--ease-out);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.book-backdrop.is-open {
+  pointer-events: all;
+  opacity: 1;
+  background: rgba(8, 6, 3, 0.82);
+  backdrop-filter: blur(12px) brightness(0.4);
+  -webkit-backdrop-filter: blur(12px) brightness(0.4);
+}
+
+/* ── Book Container ────────────────────────────────── */
+.book-container {
+  position: relative;
+  width: var(--book-open-w);
+  height: var(--book-h);
+  perspective: 2000px;
+  transform-style: preserve-3d;
+  /* initial: closed book = narrow spine width, centered */
+  transform: scale(0.6) translateY(40px);
+  opacity: 0;
+  transition: transform 0.65s var(--ease-spring),
+              opacity 0.45s var(--ease-out);
+}
+
+.book-backdrop.is-open .book-container {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* Close button */
+.book-close {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  z-index: 9100;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--book-cover-dark);
+  border: 2px solid var(--book-gold);
+  color: var(--book-gold);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.2s;
+  line-height: 1;
+}
+.book-close:hover {
+  background: var(--book-gold);
+  color: var(--book-cover-dark);
+  transform: rotate(90deg) scale(1.1);
+}
+
+/* ── Book Structure ────────────────────────────────── */
+.book {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  display: grid;
+  grid-template-columns: var(--book-spine-w) 1fr 1fr;
+  border-radius: 4px 6px 6px 4px;
+  box-shadow:
+    -8px 4px 40px rgba(0,0,0,0.7),
+     4px 8px 60px rgba(0,0,0,0.6),
+     0 0 0 1px rgba(197,162,78,0.15);
+}
+
+/* ── Spine ─────────────────────────────────────────── */
+.book-spine {
+  background: linear-gradient(180deg,
+    var(--book-cover-light) 0%,
+    var(--book-cover-dark) 40%,
+    #0e0b05 60%,
+    var(--book-cover-dark) 100%
+  );
+  border-radius: 4px 0 0 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+  /* Spine ribbing */
+  box-shadow:
+    inset -3px 0 8px rgba(0,0,0,0.6),
+    inset 2px 0 4px rgba(197,162,78,0.1);
+}
+
+/* Spine ribs */
+.book-spine::before,
+.book-spine::after {
+  content: '';
+  position: absolute;
+  left: 4px; right: 4px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--book-gold-dim), transparent);
+  border-radius: 1px;
+}
+.book-spine::before { top: 24px; }
+.book-spine::after  { bottom: 24px; }
+
+.spine-title {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  font-family: 'IM Fell English', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: var(--book-gold);
+  text-transform: uppercase;
+  opacity: 0.85;
+  max-height: 160px;
+  overflow: hidden;
+}
+
+.spine-cross {
+  font-size: 1rem;
+  color: var(--book-gold);
+  opacity: 0.6;
+}
+
+/* ── Left Page (Summary) ────────────────────────────── */
+.book-page-left,
+.book-page-right {
+  background: linear-gradient(160deg, var(--book-page) 0%, var(--book-page-dark) 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 36px 32px 36px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Parchment texture overlay */
+.book-page-left::before,
+.book-page-right::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Page inner margin rule */
+.book-page-left::after {
+  content: '';
+  position: absolute;
+  top: 32px; bottom: 32px;
+  right: 0;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(160,130,80,0.25) 20%, rgba(160,130,80,0.25) 80%, transparent);
+}
+
+/* Left page gutter shadow (spine-side) */
+.book-page-left {
+  padding-left: 36px;
+  box-shadow: inset 8px 0 16px -8px rgba(0,0,0,0.18);
+}
+
+/* Right page gutter shadow */
+.book-page-right {
+  padding-right: 36px;
+  box-shadow: inset -4px 0 12px -6px rgba(0,0,0,0.12);
+  border-radius: 0 6px 6px 0;
+}
+
+/* Page numbers */
+.page-num {
+  position: absolute;
+  bottom: 16px;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.72rem;
+  color: var(--book-ink-mid);
+  opacity: 0.5;
+  letter-spacing: 0.05em;
+}
+.book-page-left  .page-num { right: 18px; }
+.book-page-right .page-num { left: 18px; }
+
+/* ── Left Page Content ──────────────────────────────── */
+.book-sola-title-wrap {
+  margin-bottom: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.book-sola-icon {
+  font-size: 1.4rem;
+  color: var(--book-gold-dim);
+  display: block;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
+.book-sola-latin {
+  display: block;
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  color: var(--book-ink);
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+.book-sola-english {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(0.58rem, 1vw, 0.72rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--book-gold-dim);
+  margin-top: 4px;
+}
+
+.book-title-rule {
+  width: 60%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--book-gold-dim), transparent);
+  margin: 10px auto 0;
+  opacity: 0.5;
+}
+
+/* Summary text — scroll if overflow */
+.book-summary-scroll {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(160,130,80,0.3) transparent;
+  padding-right: 4px;
+}
+.book-summary-scroll::-webkit-scrollbar { width: 4px; }
+.book-summary-scroll::-webkit-scrollbar-track { background: transparent; }
+.book-summary-scroll::-webkit-scrollbar-thumb { background: rgba(160,130,80,0.3); border-radius: 2px; }
+
+.book-summary {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.78rem, 1.2vw, 0.93rem);
+  line-height: 1.75;
+  color: var(--book-ink);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.book-summary p + p { margin-top: 0.9em; }
+.book-summary em { font-style: italic; color: var(--book-ink-mid); }
+
+/* Drop cap */
+.book-summary .drop-cap::first-letter {
+  float: left;
+  font-family: 'IM Fell English', serif;
+  font-size: 3.6em;
+  line-height: 0.78;
+  padding-right: 5px;
+  padding-top: 4px;
+  color: var(--book-gold-dim);
+}
+
+/* ── Right Page Content (Verses) ───────────────────── */
+.book-verses-header {
+  text-align: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.book-verses-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--book-gold-dim);
+  opacity: 0.7;
+}
+
+.book-verses-title {
+  font-family: 'IM Fell English', serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: var(--book-ink);
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.book-verses-rule {
+  width: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--book-gold-dim), transparent);
+  margin: 8px auto 0;
+  opacity: 0.45;
+}
+
+.book-verses-scroll {
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(160,130,80,0.3) transparent;
+  padding-right: 2px;
+}
+.book-verses-scroll::-webkit-scrollbar { width: 4px; }
+.book-verses-scroll::-webkit-scrollbar-thumb { background: rgba(160,130,80,0.3); border-radius: 2px; }
+
+.book-verse {
+  margin-bottom: 20px;
+  padding-left: 14px;
+  border-left: 2px solid rgba(160,130,80,0.35);
+  position: relative;
+  /* Animate in with a quill-writing effect */
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.book-verse.verse-appear {
+  animation: verseAppear 0.5s var(--ease-out) forwards;
+}
+
+@keyframes verseAppear {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.verse-ref {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--book-gold-dim);
+  margin-bottom: 5px;
+}
+
+.verse-text {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.8rem, 1.2vw, 0.92rem);
+  line-height: 1.7;
+  color: var(--book-ink);
+  font-style: italic;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* LSB translation note */
+.verse-translation {
+  display: block;
+  margin-top: 5px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  color: var(--book-gold-dim);
+  opacity: 0.55;
+  text-transform: uppercase;
+}
+
+/* ── Page-turn animation on open ───────────────────── */
+.book-page-left,
+.book-page-right {
+  transform-origin: left center;
+  opacity: 0;
+  transform: rotateY(-25deg) scaleX(0.8);
+  transition:
+    opacity 0.5s var(--ease-out),
+    transform 0.65s var(--ease-out);
+}
+
+.book-backdrop.is-open .book-page-left {
+  opacity: 1;
+  transform: rotateY(0deg) scaleX(1);
+  transition-delay: 0.15s;
+}
+
+.book-backdrop.is-open .book-page-right {
+  opacity: 1;
+  transform: rotateY(0deg) scaleX(1);
+  transition-delay: 0.25s;
+  transform-origin: right center;
+}
+
+/* ── Sola card — indicate clickability ──────────────── */
+.sola-card {
+  cursor: pointer;
+}
+
+.sola-card::after {
+  content: 'Open Book';
+  position: absolute;
+  bottom: 14px;
+  right: 16px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-bright, #e8c060);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.sola-card:hover::after {
+  opacity: 0.65;
+}
+
+/* ── Candlelight / ink-writing shimmer on text ──────── */
+@keyframes inkWrite {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0% 0 0); }
+}
+
+.book-summary .ink-write {
+  display: inline;
+  animation: inkWrite 1.4s var(--ease-out) forwards;
+  animation-delay: 0.3s;
+}
+
+/* ── Sola card hover glow pulse (open hint) ─────────── */
+@keyframes bookPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(197,162,78,0); }
+  50%       { box-shadow: 0 0 18px 4px rgba(197,162,78,0.18); }
+}
+
+.sola-card:focus-visible {
+  outline: 2px solid var(--book-gold);
+  outline-offset: 3px;
+}
+
+/* ── Responsive: stack on small screens ─────────────── */
+@media (max-width: 700px) {
+  :root {
+    --book-spine-w: 28px;
+    --book-h: min(90vh, 680px);
+  }
+
+  .book {
+    grid-template-columns: var(--book-spine-w) 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+  }
+
+  .book-spine {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
+  .book-page-left  { grid-column: 2; grid-row: 1; }
+  .book-page-right { grid-column: 2; grid-row: 2; border-radius: 0 0 6px 0; }
+
+  .book-page-left,
+  .book-page-right {
+    padding: 20px 16px 20px 16px;
+  }
+
+  .book-summary, .verse-text {
+    font-size: 0.78rem;
+  }
+}

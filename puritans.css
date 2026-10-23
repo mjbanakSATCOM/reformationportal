@@ -1,0 +1,655 @@
+/* ============================================================
+   PURITANS SECTION — Interactive Cards + Resources
+   ============================================================ */
+
+/* ── Section layout ─────────────────────────────────── */
+.puritans-section {
+  background: var(--color-dark, #151a2a);
+  padding: var(--space-10, 5rem) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle aged parchment pattern overlay */
+.puritans-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(ellipse at 20% 0%, rgba(197,162,78,0.04) 0%, transparent 50%),
+                    radial-gradient(ellipse at 80% 100%, rgba(197,162,78,0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ── Grid of 10 Puritan cards ───────────────────────── */
+.puritans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-5, 1.5rem);
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-6, 2rem);
+}
+
+@media (min-width: 900px) {
+  .puritans-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .puritans-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .puritans-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4, 1rem);
+    padding: 0 var(--space-4, 1rem);
+  }
+}
+
+/* ── Puritan Card — flip on hover ───────────────────── */
+.puritan-card {
+  position: relative;
+  aspect-ratio: 3/4;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.puritan-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.34, 1.2, 0.64, 1);
+  border-radius: 8px;
+}
+
+.puritan-card:hover .puritan-card-inner,
+.puritan-card:focus-within .puritan-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front face */
+.puritan-card-front,
+.puritan-card-back {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Front: portrait image */
+.puritan-card-front {
+  background: var(--color-surface, #202844);
+  border: 1px solid rgba(197,162,78,0.15);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.puritan-card-front img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.puritan-card:hover .puritan-card-front img {
+  transform: scale(1.04);
+}
+
+/* Front: name plate */
+.puritan-front-info {
+  padding: 12px 14px;
+  background: linear-gradient(180deg, var(--color-surface, #202844) 0%, var(--color-dark, #151a2a) 100%);
+  border-top: 1px solid rgba(197,162,78,0.2);
+}
+
+.puritan-front-name {
+  display: block;
+  font-family: 'Boska', serif;
+  font-style: italic;
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
+  color: var(--gold-bright, #f8ebb0);
+  line-height: 1.2;
+}
+
+.puritan-front-dates {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  color: var(--gold-muted, #b8986a);
+  margin-top: 3px;
+  text-transform: uppercase;
+}
+
+/* Hover hint badge */
+.puritan-front-hint {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(197,162,78,0.85);
+  color: #0e0a04;
+  font-family: 'Cinzel', serif;
+  font-size: 0.45rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 3px 7px;
+  border-radius: 2px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.puritan-card:hover .puritan-front-hint {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Back face */
+.puritan-card-back {
+  transform: rotateY(180deg);
+  background: linear-gradient(160deg, #1e1508 0%, #2a1c0a 50%, #1a1206 100%);
+  border: 1px solid rgba(197,162,78,0.35);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.5), inset 0 0 40px rgba(197,162,78,0.04);
+  display: flex;
+  flex-direction: column;
+  padding: 16px 14px 12px;
+  gap: 8px;
+}
+
+/* Back: decorative top rule */
+.puritan-back-rule {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 2px;
+}
+.puritan-back-rule::before,
+.puritan-back-rule::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(197,162,78,0.4));
+}
+.puritan-back-rule::after {
+  background: linear-gradient(90deg, rgba(197,162,78,0.4), transparent);
+}
+.puritan-back-rule-icon {
+  font-size: 0.7rem;
+  color: var(--gold-muted, #b8986a);
+}
+
+.puritan-back-name {
+  font-family: 'Boska', serif;
+  font-style: italic;
+  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
+  color: var(--gold-bright, #f8ebb0);
+  line-height: 1.15;
+  text-align: center;
+}
+
+.puritan-back-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-muted, #b8986a);
+  text-align: center;
+  opacity: 0.8;
+}
+
+.puritan-back-bio {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.68rem, 1vw, 0.82rem);
+  line-height: 1.6;
+  color: #d4c49a;
+  flex: 1;
+  overflow: hidden;
+  /* Fade out bottom if overflow */
+  -webkit-mask-image: linear-gradient(180deg, black 70%, transparent 100%);
+  mask-image: linear-gradient(180deg, black 70%, transparent 100%);
+}
+
+.puritan-back-quote {
+  font-family: 'EB Garamond', serif;
+  font-style: italic;
+  font-size: 0.68rem;
+  color: rgba(197,162,78,0.75);
+  line-height: 1.4;
+  border-left: 2px solid rgba(197,162,78,0.3);
+  padding-left: 8px;
+  margin: 2px 0;
+}
+
+.puritan-back-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-bright, #e8c060);
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid rgba(197,162,78,0.3);
+  border-radius: 2px;
+  margin-top: auto;
+  align-self: center;
+  transition: background 0.2s, color 0.2s;
+}
+.puritan-back-cta:hover {
+  background: rgba(197,162,78,0.15);
+  border-color: rgba(197,162,78,0.6);
+}
+
+/* ── Resources sections ─────────────────────────────── */
+.puritan-resources {
+  max-width: 1280px;
+  margin: var(--space-10, 5rem) auto 0;
+  padding: 0 var(--space-6, 2rem);
+}
+
+.puritan-resources-title {
+  font-family: 'Boska', serif;
+  font-style: italic;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  color: var(--gold-bright, #f8ebb0);
+  text-align: center;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.puritan-res-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-muted, #b8986a);
+  text-align: center;
+  display: block;
+  margin-bottom: var(--space-8, 3rem);
+}
+
+/* Three-column resource panels */
+.puritan-res-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5, 1.5rem);
+}
+
+@media (max-width: 900px) {
+  .puritan-res-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.puritan-res-panel {
+  background: var(--color-surface, #202844);
+  border: 1px solid rgba(197,162,78,0.15);
+  border-radius: 8px;
+  padding: var(--space-6, 2rem);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.puritan-res-panel:hover {
+  border-color: rgba(197,162,78,0.35);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.3), 0 0 0 1px rgba(197,162,78,0.1);
+}
+
+/* Accent corner decoration */
+.puritan-res-panel::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, var(--color-accent, #c5a24e), transparent);
+}
+
+.puritan-res-panel-icon {
+  font-size: 1.6rem;
+  margin-bottom: var(--space-3, 0.75rem);
+  display: block;
+}
+
+.puritan-res-panel-title {
+  font-family: 'Cinzel', serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-muted, #b8986a);
+  margin-bottom: var(--space-2, 0.5rem);
+  display: block;
+}
+
+.puritan-res-panel-heading {
+  font-family: 'Boska', serif;
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+  color: var(--gold-bright, #f8ebb0);
+  margin-bottom: var(--space-4, 1rem);
+  line-height: 1.2;
+}
+
+/* Resource link list */
+.puritan-res-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3, 0.75rem);
+}
+
+.puritan-res-list li {
+  position: relative;
+}
+
+.puritan-res-link {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px 12px 10px 14px;
+  background: rgba(197,162,78,0.04);
+  border: 1px solid rgba(197,162,78,0.1);
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  position: relative;
+  overflow: hidden;
+}
+
+.puritan-res-link::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 2px;
+  background: var(--color-accent, #c5a24e);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.25s var(--ease-out, ease);
+}
+
+.puritan-res-link:hover {
+  background: rgba(197,162,78,0.09);
+  border-color: rgba(197,162,78,0.3);
+  transform: translateX(3px);
+}
+
+.puritan-res-link:hover::before {
+  transform: scaleY(1);
+}
+
+.puritan-res-link-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.9rem;
+  color: var(--gold-text, #edd98c);
+  line-height: 1.2;
+}
+
+.puritan-res-link-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.72rem;
+  font-style: italic;
+  color: rgba(197,162,78,0.55);
+  line-height: 1.3;
+}
+
+.puritan-res-link-badge {
+  display: inline-block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.42rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-top: 3px;
+  align-self: flex-start;
+}
+
+.badge-heritage {
+  background: rgba(197,162,78,0.15);
+  color: var(--gold-bright, #e8c060);
+  border: 1px solid rgba(197,162,78,0.25);
+}
+
+.badge-free {
+  background: rgba(74,160,74,0.12);
+  color: #8ecf8e;
+  border: 1px solid rgba(74,160,74,0.2);
+}
+
+.badge-print {
+  background: rgba(120,100,180,0.12);
+  color: #b0a0e0;
+  border: 1px solid rgba(120,100,180,0.2);
+}
+
+/* ── Heritage Books highlight box ───────────────────── */
+.heritage-feature {
+  margin-top: var(--space-8, 3rem);
+  background: linear-gradient(135deg, rgba(30,20,8,0.95) 0%, rgba(42,28,10,0.95) 100%);
+  border: 1px solid rgba(197,162,78,0.3);
+  border-radius: 10px;
+  padding: var(--space-7, 2.5rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.heritage-feature::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(197,162,78,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.heritage-feature-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4, 1rem);
+  margin-bottom: var(--space-5, 1.5rem);
+}
+
+.heritage-logo-mark {
+  width: 48px;
+  height: 48px;
+  background: rgba(197,162,78,0.12);
+  border: 1px solid rgba(197,162,78,0.3);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.heritage-feature-heading {
+  font-family: 'Boska', serif;
+  font-style: italic;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  color: var(--gold-bright, #f8ebb0);
+  line-height: 1.2;
+}
+
+.heritage-feature-sub {
+  font-family: 'Cinzel', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-muted, #b8986a);
+  display: block;
+  margin-top: 2px;
+}
+
+.heritage-feature-desc {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(0.88rem, 1.3vw, 1rem);
+  line-height: 1.7;
+  color: #d4c49a;
+  margin-bottom: var(--space-5, 1.5rem);
+  max-width: 800px;
+}
+
+/* Book sets grid */
+.book-sets-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-4, 1rem);
+}
+
+.book-set-card {
+  background: rgba(197,162,78,0.05);
+  border: 1px solid rgba(197,162,78,0.18);
+  border-radius: 6px;
+  padding: var(--space-4, 1rem) var(--space-4, 1rem) var(--space-3, 0.75rem);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2, 0.5rem);
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+
+.book-set-card:hover {
+  background: rgba(197,162,78,0.1);
+  border-color: rgba(197,162,78,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.book-set-vols {
+  font-family: 'Cinzel', serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-muted, #b8986a);
+  opacity: 0.8;
+}
+
+.book-set-title {
+  font-family: 'Boska', serif;
+  font-style: italic;
+  font-size: clamp(0.88rem, 1.3vw, 1.05rem);
+  color: var(--gold-bright, #f8ebb0);
+  line-height: 1.2;
+  flex: 1;
+}
+
+.book-set-author {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.75rem;
+  color: rgba(197,162,78,0.6);
+}
+
+.book-set-price {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  color: var(--gold-bright, #e8c060);
+  letter-spacing: 0.05em;
+}
+
+/* ── Bookstores section ─────────────────────────────── */
+.bookstores-strip {
+  margin-top: var(--space-8, 3rem);
+  padding-top: var(--space-6, 2rem);
+  border-top: 1px solid rgba(197,162,78,0.12);
+}
+
+.bookstores-eyebrow {
+  font-family: 'Cinzel', serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-muted, #b8986a);
+  text-align: center;
+  display: block;
+  margin-bottom: var(--space-5, 1.5rem);
+}
+
+.bookstores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-3, 0.75rem);
+}
+
+.bookstore-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(197,162,78,0.04);
+  border: 1px solid rgba(197,162,78,0.12);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+}
+
+.bookstore-pill:hover {
+  background: rgba(197,162,78,0.1);
+  border-color: rgba(197,162,78,0.35);
+  transform: translateY(-2px);
+}
+
+.bookstore-pill-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(197,162,78,0.1);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.bookstore-pill-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.bookstore-pill-name {
+  display: block;
+  font-family: 'EB Garamond', serif;
+  font-size: 0.88rem;
+  color: var(--gold-text, #edd98c);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.bookstore-pill-tag {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: 0.45rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(197,162,78,0.45);
+  margin-top: 1px;
+}
+
+/* ── Number badge on puritan card ───────────────────── */
+.puritan-num-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 24px;
+  height: 24px;
+  background: rgba(10,8,3,0.75);
+  border: 1px solid rgba(197,162,78,0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 0.55rem;
+  color: var(--gold-muted, #b8986a);
+  z-index: 2;
+}

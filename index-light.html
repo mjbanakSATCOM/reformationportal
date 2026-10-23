@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+   ______                            __
+  / ____/___  ____ ___  ____  __  __/ /____  _____
+ / /   / __ \/ __ `__ \/ __ \/ / / / __/ _ \/ ___/
+/ /___/ /_/ / / / / / / /_/ / /_/ / /_/  __/ /
+\____/\____/_/ /_/ /_/ .___/\__,_/\__/\___/_/
+                    /_/
+        Created with Perplexity Computer
+        https://www.perplexity.ai/computer
+-->
+<meta name="generator" content="Perplexity Computer">
+<meta name="author" content="Perplexity Computer">
+<meta property="og:see_also" content="https://www.perplexity.ai/computer">
+<link rel="author" href="https://www.perplexity.ai/computer">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Protestant Reformation &amp; the Puritans — Light Edition</title>
+<meta name="description" content="A comprehensive portal on the Protestant Reformation and the Puritans — from John Wycliffe to John MacArthur. Interactive timeline, reformers, Puritan fathers, resources, seminaries, and research.">
+
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=boska@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Cinzel:wght@400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./style-light.css">
+<link rel="stylesheet" href="./book-modal-light.css">
+<link rel="stylesheet" href="./puritans.css">
+<link rel="stylesheet" href="./scene-bgs.css">
+</head>
+<body class="edition-light">
+
+<aside class="hymn-player" id="hymn-player" aria-label="Luther chorale background music">
+  <button type="button" class="hymn-player-btn" id="hymn-toggle" aria-pressed="false" aria-label="Play Luther hymn strings">
+    <svg class="icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    <svg class="icon-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg>
+  </button>
+  <div class="hymn-player-meta">
+    <span class="hymn-player-kicker">Luther chorales</span>
+    <span class="hymn-player-title">Ein feste Burg ist unser Gott</span>
+  </div>
+  <audio id="hymn-audio" autoplay playsinline preload="auto">
+    <source src="./assets/hymn-ein-feste-burg.mp3" type="audio/mpeg">
+  </audio>
+</aside>
+
+<!-- LUTHER ROSE BACKGROUND WATERMARK -->
+<div class="luther-rose" aria-hidden="true"></div>
+
+<!-- NAVIGATION -->
+<nav class="site-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="Reformation Portal Home">
+      <svg width="22" height="22" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+        <rect x="12" y="2" width="4" height="24" rx="1" fill="#b8922e"/>
+        <rect x="4" y="9" width="20" height="4" rx="1" fill="#b8922e"/>
+      </svg>
+      <span>Reformation Portal</span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#reformers">Reformers</a></li>
+      <li><a href="#puritans">Puritans</a></li>
+      <li><a href="#five-solas">Five Solas</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#seminaries">Seminaries</a></li>
+      <li><a href="#confessions">Confessions</a></li>
+      <li><a href="#youtube">Video</a></li>
+      <li><a href="#research">Research</a></li>
+    </ul>
+    <a class="theme-toggle" href="./index.html" aria-label="Switch to dark theme">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+      Dark Edition
+    </a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="home">
+  <div class="hero-bg" role="presentation"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">A Comprehensive Study Portal</p>
+    <h1 class="hero-title">The <span>Protestant</span> Reformation<br><span class="hero-subtitle-puritans">&amp; the Puritans</span></h1>
+    <p class="hero-subtitle">
+      From Wycliffe's dawn to the modern heirs of Geneva — a living treasury of reformers,
+      confessions, and the eternal cry of <em>Sola Scriptura</em>.
+    </p>
+    <div class="gold-divider"></div>
+    <p class="hero-verse">&ldquo;Here I stand, I can do no other, God help me. Amen.&rdquo;<br>— Martin Luther, Diet of Worms, 1521</p>
+  </div>
+</header>
+
+<!-- TIMELINE -->
+<section class="timeline-section" id="timeline">
+  <div class="section-inner" style="padding: var(--space-10) var(--space-6) var(--space-4);">
+    <div class="section-header" style="margin-bottom: var(--space-5);">
+      <p class="section-eyebrow">Interactive Timeline</p>
+      <h2 class="section-title">Torchbearers of Reform</h2>
+      <p class="section-desc">Hover over each reformer to reveal their portrait. Click to read their biography.</p>
+    </div>
+  </div>
+  <div class="timeline-container">
+    <div class="timeline-track">
+      <div class="timeline-items" role="list">
+
+        <!-- 1. Wycliffe -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/John_Wycliffe" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">John Wycliffe</span><span class="tl-date">1320–1384</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Pre-Reformation</span>
+              <img src="./assets/wycliffe.png" alt="John Wycliffe" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">John Wycliffe</span>
+              <p class="tl-tooltip-desc">Morning Star of the Reformation. First English Bible translator.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/John_Wycliffe" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 2. Jan Hus -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/Jan_Hus" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">Jan Hus</span><span class="tl-date">1369–1415</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Pre-Reformation</span>
+              <img src="./assets/hus.png" alt="Jan Hus" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">Jan Hus</span>
+              <p class="tl-tooltip-desc">Czech martyr burned at the Council of Constance.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/Jan_Hus" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 3. Tyndale -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/William_Tyndale" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">William Tyndale</span><span class="tl-date">1494–1536</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">English Reformation</span>
+              <img src="./assets/tyndale.png" alt="William Tyndale" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">William Tyndale</span>
+              <p class="tl-tooltip-desc">First printed English New Testament. Martyred for his work.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/William_Tyndale" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 4. Luther -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/Martin_Luther" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">Martin Luther</span><span class="tl-date">1483–1546</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">German Reformation</span>
+              <img src="./assets/luther.png" alt="Martin Luther" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">Martin Luther</span>
+              <p class="tl-tooltip-desc">95 Theses ignited the Reformation. Translated the German Bible.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/Martin_Luther" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 5. Zwingli -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/Huldrych_Zwingli" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">Ulrich Zwingli</span><span class="tl-date">1484–1531</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Swiss Reformation</span>
+              <img src="./assets/zwingli.png" alt="Ulrich Zwingli" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">Ulrich Zwingli</span>
+              <p class="tl-tooltip-desc">Led the Reformation in Zurich. Died in battle defending Protestantism.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/Huldrych_Zwingli" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 6. Calvin -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/John_Calvin" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">John Calvin</span><span class="tl-date">1509–1564</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Reformed Theology</span>
+              <img src="./assets/calvin.png" alt="John Calvin" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">John Calvin</span>
+              <p class="tl-tooltip-desc">Institutes of the Christian Religion. Father of Calvinism.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/John_Calvin" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 7. Knox -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/John_Knox" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">John Knox</span><span class="tl-date">1514–1572</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Scottish Reformation</span>
+              <img src="./assets/knox.png" alt="John Knox" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">John Knox</span>
+              <p class="tl-tooltip-desc">Founder of Presbyterianism. Scotland's lion of Reform.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/John_Knox" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 8. Edwards -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/Jonathan_Edwards_(theologian)" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">Jonathan Edwards</span><span class="tl-date">1703–1758</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Great Awakening</span>
+              <img src="./assets/edwards.png" alt="Jonathan Edwards" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">Jonathan Edwards</span>
+              <p class="tl-tooltip-desc">America's greatest Puritan theologian. First Great Awakening.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/Jonathan_Edwards_(theologian)" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 9. Spurgeon -->
+        <a class="timeline-item" href="https://en.wikipedia.org/wiki/Charles_Spurgeon" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">C.H. Spurgeon</span><span class="tl-date">1834–1892</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Victorian Era</span>
+              <img src="./assets/spurgeon.png" alt="Charles Spurgeon" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">Charles Spurgeon</span>
+              <p class="tl-tooltip-desc">Prince of Preachers. Preached to 10 million people.</p>
+              <a class="tl-tooltip-link" href="https://en.wikipedia.org/wiki/Charles_Spurgeon" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 10. Warfield -->
+        <a class="timeline-item" href="https://banneroftruth.org/us/about/banner-authors/b-b-warfield/" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">B.B. Warfield</span><span class="tl-date">1851–1921</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Old Princeton</span>
+              <img src="./assets/warfield.png" alt="B.B. Warfield" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">B.B. Warfield</span>
+              <p class="tl-tooltip-desc">Princeton's defender of biblical inerrancy and sovereignty.</p>
+              <a class="tl-tooltip-link" href="https://banneroftruth.org/us/about/banner-authors/b-b-warfield/" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 11. R.C. Sproul -->
+        <a class="timeline-item" href="https://learn.ligonier.org/articles/r-c-sproul-man-called-god" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">R.C. Sproul</span><span class="tl-date">1939–2017</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Modern Reformed</span>
+              <img src="./assets/sproul.png" alt="R.C. Sproul" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">R.C. Sproul</span>
+              <p class="tl-tooltip-desc">Founder of Ligonier Ministries. Champion of the holiness of God.</p>
+              <a class="tl-tooltip-link" href="https://learn.ligonier.org/articles/r-c-sproul-man-called-god" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+        <!-- 12. MacArthur -->
+        <a class="timeline-item" href="https://www.gracechurch.org/leader/macarthur/john" target="_blank" rel="noopener noreferrer">
+          <div class="tl-label"><span class="tl-name">John MacArthur</span><span class="tl-date">1939–2025</span></div>
+          <div class="tl-dot"></div>
+          <div class="tl-tooltip">
+            <div class="tl-tooltip-img-wrap">
+              <span class="tl-era-badge">Modern Reformed</span>
+              <img src="./assets/macarthur.png" alt="John MacArthur" loading="lazy">
+            </div>
+            <div class="tl-tooltip-body">
+              <span class="tl-tooltip-name">John MacArthur</span>
+              <p class="tl-tooltip-desc">Pastor, author, president of The Master's Seminary. Grace to You.</p>
+              <a class="tl-tooltip-link" href="https://www.gracechurch.org/leader/macarthur/john" target="_blank" rel="noopener noreferrer">Read biography →</a>
+            </div>
+          </div>
+        </a>
+
+      </div><!-- .timeline-items -->
+    </div><!-- .timeline-track -->
+  </div><!-- .timeline-container -->
+</section>
+
+<!-- FIVE SOLAS -->
+<section class="section section--alt" id="five-solas">
+  <div class="solas-study-bg" aria-hidden="true">
+    <video autoplay muted loop playsinline preload="metadata" poster="./assets/luther-study-poster.png">
+      <source src="./assets/luther-study.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">The Heart of the Reformation</p>
+      <h2 class="section-title">The Five Solas</h2>
+      <p class="section-desc">Five Latin phrases that crystallize the theological convictions of the Reformation — the doctrines for which men and women surrendered their lives rather than compromise Scripture.<br><span style="font-family:'Cinzel',serif;font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;color:#8a6a20;opacity:0.75;">✦ Click any sola to open its book ✦</span></p>
+    </div>
+    <div class="solas-grid reveal-stagger">
+      <div class="sola-card reveal" data-sola="scriptura" title="Click to open the Book of Sola Scriptura">
+        <div class="ornament-cross">✟</div>
+        <span class="sola-latin">Sola Scriptura</span>
+        <span class="sola-meaning">Scripture Alone</span>
+        <p class="sola-desc">The Holy Bible is the only infallible rule for faith and life — supreme over councils, popes, and tradition.</p>
+      </div>
+      <div class="sola-card reveal" data-sola="fide" title="Click to open the Book of Sola Fide">
+        <div class="ornament-cross">✟</div>
+        <span class="sola-latin">Sola Fide</span>
+        <span class="sola-meaning">Faith Alone</span>
+        <p class="sola-desc">Sinners are justified before God through faith alone — not sacraments, merits, or penances.</p>
+      </div>
+      <div class="sola-card reveal" data-sola="gratia" title="Click to open the Book of Sola Gratia">
+        <div class="ornament-cross">✟</div>
+        <span class="sola-latin">Sola Gratia</span>
+        <span class="sola-meaning">Grace Alone</span>
+        <p class="sola-desc">Salvation is entirely the sovereign gift of God's grace, from election to glorification.</p>
+      </div>
+      <div class="sola-card reveal" data-sola="christus" title="Click to open the Book of Solus Christus">
+        <div class="ornament-cross">✟</div>
+        <span class="sola-latin">Solus Christus</span>
+        <span class="sola-meaning">Christ Alone</span>
+        <p class="sola-desc">Jesus Christ, crucified and risen, is the sole mediator between God and mankind.</p>
+      </div>
+      <div class="sola-card reveal" data-sola="gloria" title="Click to open the Book of Soli Deo Gloria">
+        <div class="ornament-cross">✟</div>
+        <span class="sola-latin">Soli Deo Gloria</span>
+        <span class="sola-meaning">Glory to God Alone</span>
+        <p class="sola-desc">All things — creation, redemption, history itself — exist for the glory of God alone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     TOP 10 PURITANS SECTION
+     ════════════════════════════════════════════════════════ -->
+<section class="puritans-section section" id="puritans">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Soldiers of Grace</p>
+      <h2 class="section-title">The Ten Great Puritans</h2>
+      <p class="section-desc">Men who fought for a purer church, suffered exile and prison for their convictions, and left behind a treasury of pastoral theology that still feeds the soul five centuries on. <em>Hover over each portrait to read their story.</em></p>
+    </div>
+  </div>
+
+  <!-- Puritan Cards Grid -->
+  <div class="puritans-grid reveal-stagger">
+
+    <!-- 1. John Owen -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="John Owen — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">I</span>
+          <img src="./assets/puritan-owen.png" alt="John Owen, Puritan theologian" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">John Owen</span>
+            <span class="puritan-front-dates">1616 – 1683</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">John Owen</span>
+          <span class="puritan-back-title">The Prince of the Puritans · Oxford · England</span>
+          <p class="puritan-back-bio">Called the Prince of Puritans, Owen served as Vice-Chancellor of Oxford under Cromwell, championed Congregationalism, and wrote over 80 volumes of theology. His works on sin, the Holy Spirit, and Christ remain unequalled in depth and pastoral warmth.</p>
+          <blockquote class="puritan-back-quote">"He who has slight thoughts of sin never had great thoughts of God."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/John_Owen_(theologian)" target="_blank" rel="noopener noreferrer">✦ Read Biography</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Richard Sibbes -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="Richard Sibbes — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">II</span>
+          <img src="./assets/puritan-sibbes.png" alt="Richard Sibbes, Puritan preacher" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">Richard Sibbes</span>
+            <span class="puritan-front-dates">1577 – 1635</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">Richard Sibbes</span>
+          <span class="puritan-back-title">The Sweet Dropper · Cambridge · England</span>
+          <p class="puritan-back-bio">Known as "The Sweet Dropper" for his tender, comforting preaching, Sibbes revived Cambridge with his lectures at Holy Trinity. His <em>Bruised Reed</em> converted many and deeply influenced Puritanism's pastoral warmth and evangelical tone.</p>
+          <blockquote class="puritan-back-quote">"God loves with a love of compassion; he pities our infirmities."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/Richard_Sibbes" target="_blank" rel="noopener noreferrer">✦ Read Biography</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Thomas Watson -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="Thomas Watson — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">III</span>
+          <img src="./assets/puritan-watson.png" alt="Thomas Watson, Westminster divine" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">Thomas Watson</span>
+            <span class="puritan-front-dates">1620 – 1686</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">Thomas Watson</span>
+          <span class="puritan-back-title">Westminster Divine · London · England</span>
+          <p class="puritan-back-bio">A Westminster Assembly participant ejected in 1662, Watson's <em>A Body of Practical Divinity</em> remains the most accessible exposition of the Westminster Shorter Catechism. His vivid, aphoristic style makes deep theology instantly graspable.</p>
+          <blockquote class="puritan-back-quote">"Thankfulness is the tune of heaven."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/Thomas_Watson_(Puritan)" target="_blank" rel="noopener noreferrer">✦ Read Biography</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. John Bunyan -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="John Bunyan — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">IV</span>
+          <img src="./assets/puritan-bunyan.png" alt="John Bunyan, author of Pilgrim's Progress" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">John Bunyan</span>
+            <span class="puritan-front-dates">1628 – 1688</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">John Bunyan</span>
+          <span class="puritan-back-title">Tinker-Preacher · Bedford · England</span>
+          <p class="puritan-back-bio">A tinker who became the greatest Puritan storyteller. Imprisoned twelve years for unlicensed preaching, Bunyan wrote <em>The Pilgrim's Progress</em> — the most widely read book after the Bible. His courage and creativity remain an unmatched legacy.</p>
+          <blockquote class="puritan-back-quote">"You have not lived today until you have done something for someone who can never repay you."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/John_Bunyan" target="_blank" rel="noopener noreferrer">✦ Read Biography</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. William Perkins -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="William Perkins — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">V</span>
+          <img src="./assets/puritan-perkins.png" alt="William Perkins, Father of Puritanism" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">William Perkins</span>
+            <span class="puritan-front-dates">1558 – 1602</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">William Perkins</span>
+          <span class="puritan-back-title">Father of Puritanism · Cambridge · England</span>
+          <p class="puritan-back-bio">Converted from a life of drunkenness at Cambridge, Perkins became the foundational architect of Puritan theology. His <em>Art of Prophesying</em> shaped a generation of preachers; his complete works now run to ten volumes from Reformation Heritage Books.</p>
+          <blockquote class="puritan-back-quote">"The Word of God alone is the foundation of all learning."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/William_Perkins_(theologian)" target="_blank" rel="noopener noreferrer">✦ Read Biography</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Thomas Brooks -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="Thomas Brooks — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">VI</span>
+          <img src="./assets/puritan-brooks.png" alt="Thomas Brooks, Puritan preacher" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">Thomas Brooks</span>
+            <span class="puritan-front-dates">1608 – 1680</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">Thomas Brooks</span>
+          <span class="puritan-back-title">London Preacher · England</span>
+          <p class="puritan-back-bio">Beloved London preacher and prolific writer, Brooks excelled in diagnosing the devices of Satan and prescribing gospel remedies. His <em>Precious Remedies Against Satan's Devices</em> is arguably the most practically useful book the Puritans ever wrote.</p>
+          <blockquote class="puritan-back-quote">"Satan promises the best but pays with the worst."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/Thomas_Brooks_(Puritan)" target="_blank" rel="noopener noreferrer">✦ Read Biography</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Samuel Rutherford -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="Samuel Rutherford — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">VII</span>
+          <img src="./assets/puritan-rutherford.png" alt="Samuel Rutherford, Scottish Covenanter" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">Samuel Rutherford</span>
+            <span class="puritan-front-dates">1600 – 1661</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">Samuel Rutherford</span>
+          <span class="puritan-back-title">Scottish Covenanter · St Andrews · Scotland</span>
+          <p class="puritan-back-bio">Exiled to Aberdeen for preaching, Rutherford wrote letters from banishment that became among the most treasured spiritual correspondence in Christian history. C.H. Spurgeon said reading his letters felt like walking through a garden of spices.</p>
+          <blockquote class="puritan-back-quote">"The cross of Christ is the sweetest burden that ever I bore."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/Samuel_Rutherford" target="_blank" rel="noopener noreferrer">✦ Read Biography</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. John Flavel -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="John Flavel — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">VIII</span>
+          <img src="./assets/puritan-flavel.png" alt="John Flavel, Puritan minister" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">John Flavel</span>
+            <span class="puritan-front-dates">1628 – 1691</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">John Flavel</span>
+          <span class="puritan-back-title">Dartmouth Minister · Devon · England</span>
+          <p class="puritan-back-bio">Twice ejected from his Dartmouth parish, Flavel preached in fields and ships and left six volumes of extraordinary pastoral theology. <em>The Mystery of Providence</em> remains Tim Challies' top Puritan Paperback recommendation for its life-changing perspective on God's sovereignty in ordinary events.</p>
+          <blockquote class="puritan-back-quote">"The deeper we see into our own hearts, the higher we see God."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/John_Flavel" target="_blank" rel="noopener noreferrer">✦ Explore Works</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Richard Baxter -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="Richard Baxter — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">IX</span>
+          <img src="./assets/puritan-baxter.png" alt="Richard Baxter, Reformed Pastor" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">Richard Baxter</span>
+            <span class="puritan-front-dates">1615 – 1691</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">Richard Baxter</span>
+          <span class="puritan-back-title">The Reformed Pastor · Kidderminster · England</span>
+          <p class="puritan-back-bio">Despite lifelong illness, Baxter transformed Kidderminster from irreligion to a model of gospel-saturated community. <em>The Reformed Pastor</em> remains the gold standard of pastoral theology, and <em>The Saints' Everlasting Rest</em> his meditation on heaven written while ill on horseback.</p>
+          <blockquote class="puritan-back-quote">"Preach as a dying man to dying men."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/Richard_Baxter" target="_blank" rel="noopener noreferrer">✦ Explore Works</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Jeremiah Burroughs -->
+    <div class="puritan-card reveal" tabindex="0" aria-label="Jeremiah Burroughs — hover to read biography">
+      <div class="puritan-card-inner">
+        <div class="puritan-card-front">
+          <span class="puritan-num-badge">X</span>
+          <img src="./assets/puritan-burroughs.png" alt="Jeremiah Burroughs, Puritan Independent" loading="lazy">
+          <div class="puritan-front-info">
+            <span class="puritan-front-name">Jeremiah Burroughs</span>
+            <span class="puritan-front-dates">1599 – 1646</span>
+          </div>
+          <span class="puritan-front-hint">Hover to Explore</span>
+        </div>
+        <div class="puritan-card-back">
+          <div class="puritan-back-rule"><span class="puritan-back-rule-icon">✟</span></div>
+          <span class="puritan-back-name">Jeremiah Burroughs</span>
+          <span class="puritan-back-title">Westminster Independent · London · England</span>
+          <p class="puritan-back-bio">One of the most popular preachers of his age, Burroughs was called "the reconciler" for his irenic spirit amid Puritan controversies. His <em>Rare Jewel of Christian Contentment</em> is among the most personally transformative books the Puritans produced — a masterwork on Philippians 4:11.</p>
+          <blockquote class="puritan-back-quote">"Contentment is a sweet, inward, quiet gracious frame of spirit, freely submitting to God's disposal."</blockquote>
+          <a class="puritan-back-cta" href="https://en.wikipedia.org/wiki/Jeremiah_Burroughs" target="_blank" rel="noopener noreferrer">✦ Explore Works</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /puritans-grid -->
+
+
+  <!-- ════ PURITAN RESOURCES ════ -->
+  <div class="puritan-resources">
+
+    <p class="section-eyebrow" style="text-align:center;margin-bottom:0.25rem;">Learn · Explore · Collect</p>
+    <h3 class="puritan-resources-title">Puritan Learning & Resources</h3>
+    <span class="puritan-res-eyebrow">Learning Centers · Recommended Reading · Bookstores</span>
+
+    <!-- Three panels: Learning Centers / Recommended Sets / Bookstores -->
+    <div class="puritan-res-grid">
+
+      <!-- Panel 1: Puritan Learning Centers -->
+      <div class="puritan-res-panel">
+        <span class="puritan-res-panel-icon">🏛️</span>
+        <span class="puritan-res-panel-title">Learning Centers</span>
+        <h4 class="puritan-res-panel-heading">Study the Puritans Online & In Person</h4>
+        <ul class="puritan-res-list">
+          <li>
+            <a class="puritan-res-link" href="https://prts.edu" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Puritan Reformed Theological Seminary</span>
+              <span class="puritan-res-link-desc">Grand Rapids, MI — Joel Beeke's seminary dedicated to Puritan-Reformed theology, with open-access research databases and the Puritan Research Center.</span>
+              <span class="puritan-res-link-badge badge-heritage">prts.edu</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://www.prts.edu/library" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">PRTS Open Access Research</span>
+              <span class="puritan-res-link-desc">Free access to digital primary sources, dissertations, and Puritan Research Center archives — the finest scholarly gateway to Puritan primary texts.</span>
+              <span class="puritan-res-link-badge badge-free">Free Access</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://www.apuritansmind.com" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">A Puritan's Mind</span>
+              <span class="puritan-res-link-desc">Comprehensive online archive of Puritan biographies, sermons, and theology articles — an invaluable free resource for students and pastors.</span>
+              <span class="puritan-res-link-badge badge-free">Free</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://www.puritanlibrary.com" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Puritan Library (Monergism)</span>
+              <span class="puritan-res-link-desc">Free Puritan e-books, online texts, and curated reading lists from Monergism.com — including works of Sibbes, Owen, Brooks, and more.</span>
+              <span class="puritan-res-link-badge badge-free">Free eBooks</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://www.puritanboard.com" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">The Puritan Board</span>
+              <span class="puritan-res-link-desc">The premier Reformed online discussion community — deep theological conversation, reading group forums, and Puritan study threads.</span>
+              <span class="puritan-res-link-badge badge-free">Community</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Panel 2: Recommended Books & Sets -->
+      <div class="puritan-res-panel">
+        <span class="puritan-res-panel-icon">📚</span>
+        <span class="puritan-res-panel-title">Must-Read Books</span>
+        <h4 class="puritan-res-panel-heading">Start Here: Essential Titles</h4>
+        <ul class="puritan-res-list">
+          <li>
+            <a class="puritan-res-link" href="https://heritagebooks.org/categories/beekes-ultimate-puritan-reading-list.html" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Beeke's Ultimate Puritan Reading List</span>
+              <span class="puritan-res-link-desc">The definitive guided entry into Puritan literature from PRTS president Joel Beeke — what to read first, and why. Includes video series.</span>
+              <span class="puritan-res-link-badge badge-heritage">Reformation Heritage</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://heritagebooks.org/products/meet-the-puritans-hardcover" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Meet the Puritans — Beeke, Pederson & Jones</span>
+              <span class="puritan-res-link-desc">The standard reference guide to Puritan biography and bibliography — essential for any serious student. 2nd edition covers 150+ Puritans.</span>
+              <span class="puritan-res-link-badge badge-heritage">RHB · $55</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://heritagebooks.org/PuritanTreasures" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Puritan Treasures For Today Series</span>
+              <span class="puritan-res-link-desc">Reformation Heritage's flagship series bringing the best Puritan pastoral theology into print with modern introductions and quality binding.</span>
+              <span class="puritan-res-link-badge badge-heritage">Reformation Heritage</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://banneroftruth.org/us/store/series/puritan-paperbacks/" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Banner of Truth Puritan Paperbacks (65 Vols.)</span>
+              <span class="puritan-res-link-desc">The complete 65-volume series remains the most accessible entry point. Tim Challies says these "may just change your life." Individual vols. from $8.</span>
+              <span class="puritan-res-link-badge badge-print">Banner of Truth</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://heritagebooks.org/categories/christian-living/puritan-paperbacks.html" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">RHB Puritan Paperbacks Collection</span>
+              <span class="puritan-res-link-desc">Works by Watson, Sibbes, Burroughs, Owen, Flavel, Brooks, Goodwin, Vincent — Reformation Heritage's own expanded Puritan paperback selection.</span>
+              <span class="puritan-res-link-badge badge-heritage">Free Delivery $75+</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Panel 3: Bookstores -->
+      <div class="puritan-res-panel">
+        <span class="puritan-res-panel-icon">🏪</span>
+        <span class="puritan-res-panel-title">Christian Bookstores</span>
+        <h4 class="puritan-res-panel-heading">Where to Buy Puritan Books</h4>
+        <ul class="puritan-res-list">
+          <li>
+            <a class="puritan-res-link" href="https://heritagebooks.org" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Reformation Heritage Books</span>
+              <span class="puritan-res-link-desc">Grand Rapids — The premier Puritan and Reformed bookstore. Home of Beeke's Reading List, Puritan Treasures series, and complete Works sets. Free delivery over $75.</span>
+              <span class="puritan-res-link-badge badge-heritage">Top Recommended</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://banneroftruth.org/us/" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Banner of Truth (USA)</span>
+              <span class="puritan-res-link-desc">Edinburgh-founded Reformed publisher and bookstore — home of the complete Puritan Paperbacks series and the finest Reformed reprints. A living ministry.</span>
+              <span class="puritan-res-link-badge badge-print">banneroftruth.org</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://bookstore.prts.edu" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Puritan Reformed Bookstore (PRTS)</span>
+              <span class="puritan-res-link-desc">PRTS's own bookstore carrying a wide selection of used Reformed and Puritan volumes. Excellent source for complete works sets at strong prices.</span>
+              <span class="puritan-res-link-badge badge-heritage">Used Books</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://www.puritanpublications.com/shop/" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Puritan Publications</span>
+              <span class="puritan-res-link-desc">290+ Puritan and Westminster works in print, including over 65 Westminster Divines published for the first time. A specialist publisher of rare texts.</span>
+              <span class="puritan-res-link-badge badge-print">Westminster Divines</span>
+            </a>
+          </li>
+          <li>
+            <a class="puritan-res-link" href="https://www.christianbook.com" target="_blank" rel="noopener noreferrer">
+              <span class="puritan-res-link-name">Christianbook.com</span>
+              <span class="puritan-res-link-desc">The largest Christian online retailer, carrying all major Puritan titles, Banner of Truth sets, and RHB products — often with significant discounts.</span>
+              <span class="puritan-res-link-badge badge-free">Largest Selection</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /puritan-res-grid -->
+
+    <!-- Heritage Books Feature Box -->
+    <div class="heritage-feature">
+      <div class="heritage-feature-top">
+        <div class="heritage-logo-mark">📖</div>
+        <div>
+          <h4 class="heritage-feature-heading">Reformation Heritage Books — Complete Library Sets</h4>
+          <span class="heritage-feature-sub">heritagebooks.org · Grand Rapids, Michigan</span>
+        </div>
+      </div>
+      <p class="heritage-feature-desc">
+        Reformation Heritage Books, founded by Joel R. Beeke, stands as the foremost publisher of Puritan and Reformed theology in the world today. Their landmark publishing achievement is the complete <em>Works of William Perkins</em> in 10 volumes — the first critical modern edition ever produced. For serious collectors and pastors, these complete sets represent the finest investment in Puritan literature available:
+      </p>
+      <div class="book-sets-grid">
+        <a class="book-set-card" href="https://heritagebooks.org/categories/works-sets.html" target="_blank" rel="noopener noreferrer">
+          <span class="book-set-vols">16 Volumes</span>
+          <span class="book-set-title">The Works of John Owen</span>
+          <span class="book-set-author">John Owen</span>
+          <span class="book-set-price">from $275</span>
+        </a>
+        <a class="book-set-card" href="https://heritagebooks.org/categories/works-sets.html" target="_blank" rel="noopener noreferrer">
+          <span class="book-set-vols">10 Volumes</span>
+          <span class="book-set-title">Complete Works of William Perkins</span>
+          <span class="book-set-author">William Perkins</span>
+          <span class="book-set-price">Reformation Heritage</span>
+        </a>
+        <a class="book-set-card" href="https://heritagebooks.org/categories/works-sets.html" target="_blank" rel="noopener noreferrer">
+          <span class="book-set-vols">7 Volumes</span>
+          <span class="book-set-title">Works of Richard Sibbes</span>
+          <span class="book-set-author">Richard Sibbes</span>
+          <span class="book-set-price">from $200</span>
+        </a>
+        <a class="book-set-card" href="https://heritagebooks.org/categories/works-sets.html" target="_blank" rel="noopener noreferrer">
+          <span class="book-set-vols">7 Volumes</span>
+          <span class="book-set-title">Works of Thomas Watson</span>
+          <span class="book-set-author">Thomas Watson</span>
+          <span class="book-set-price">from $200</span>
+        </a>
+        <a class="book-set-card" href="https://heritagebooks.org/categories/works-sets.html" target="_blank" rel="noopener noreferrer">
+          <span class="book-set-vols">4 Volumes</span>
+          <span class="book-set-title">Practical Works of Richard Baxter</span>
+          <span class="book-set-author">Richard Baxter</span>
+          <span class="book-set-price">from $225</span>
+        </a>
+        <a class="book-set-card" href="https://heritagebooks.org/products/puritan-classics-box-set-10-volume-set.html" target="_blank" rel="noopener noreferrer">
+          <span class="book-set-vols">10 Volumes</span>
+          <span class="book-set-title">Puritan Classics Box Set</span>
+          <span class="book-set-author">Perkins · Sibbes · Rutherford · Watson · Brooks · Flavel · Bunyan</span>
+          <span class="book-set-price">Cloth-bound · Ribbon Markers</span>
+        </a>
+        <a class="book-set-card" href="https://bookstore.prts.edu" target="_blank" rel="noopener noreferrer">
+          <span class="book-set-vols">22 Volumes</span>
+          <span class="book-set-title">Complete Works of Thomas Manton</span>
+          <span class="book-set-author">Thomas Manton</span>
+          <span class="book-set-price">from $250</span>
+        </a>
+        <a class="book-set-card" href="https://banneroftruth.org/us/store/series/puritan-paperbacks/" target="_blank" rel="noopener noreferrer">
+          <span class="book-set-vols">65 Volumes</span>
+          <span class="book-set-title">Complete Puritan Paperbacks Set</span>
+          <span class="book-set-author">Banner of Truth</span>
+          <span class="book-set-price">from $392 (full set)</span>
+        </a>
+      </div>
+    </div><!-- /heritage-feature -->
+
+    <!-- Quick bookstores strip -->
+    <div class="bookstores-strip">
+      <span class="bookstores-eyebrow">✦ Find These Books At ✦</span>
+      <div class="bookstores-grid">
+        <a class="bookstore-pill" href="https://heritagebooks.org" target="_blank" rel="noopener noreferrer">
+          <div class="bookstore-pill-icon">📖</div>
+          <div class="bookstore-pill-info">
+            <span class="bookstore-pill-name">Reformation Heritage Books</span>
+            <span class="bookstore-pill-tag">heritagebooks.org · Top Recommended</span>
+          </div>
+        </a>
+        <a class="bookstore-pill" href="https://banneroftruth.org/us/" target="_blank" rel="noopener noreferrer">
+          <div class="bookstore-pill-icon">🏴󠁧󠁢󠁳󠁣󠁴󠁿</div>
+          <div class="bookstore-pill-info">
+            <span class="bookstore-pill-name">Banner of Truth USA</span>
+            <span class="bookstore-pill-tag">banneroftruth.org · Edinburgh Founded</span>
+          </div>
+        </a>
+        <a class="bookstore-pill" href="https://bookstore.prts.edu" target="_blank" rel="noopener noreferrer">
+          <div class="bookstore-pill-icon">🎓</div>
+          <div class="bookstore-pill-info">
+            <span class="bookstore-pill-name">Puritan Reformed Bookstore</span>
+            <span class="bookstore-pill-tag">bookstore.prts.edu · Used Books</span>
+          </div>
+        </a>
+        <a class="bookstore-pill" href="https://www.puritanpublications.com/shop/" target="_blank" rel="noopener noreferrer">
+          <div class="bookstore-pill-icon">⚙️</div>
+          <div class="bookstore-pill-info">
+            <span class="bookstore-pill-name">Puritan Publications</span>
+            <span class="bookstore-pill-tag">Westminster Divines · 290+ Works</span>
+          </div>
+        </a>
+        <a class="bookstore-pill" href="https://www.christianbook.com" target="_blank" rel="noopener noreferrer">
+          <div class="bookstore-pill-icon">🛒</div>
+          <div class="bookstore-pill-info">
+            <span class="bookstore-pill-name">Christianbook.com</span>
+            <span class="bookstore-pill-tag">Largest Selection · Deep Discounts</span>
+          </div>
+        </a>
+        <a class="bookstore-pill" href="https://www.wtsbooks.com" target="_blank" rel="noopener noreferrer">
+          <div class="bookstore-pill-icon">📚</div>
+          <div class="bookstore-pill-info">
+            <span class="bookstore-pill-name">Westminster Bookstore</span>
+            <span class="bookstore-pill-tag">wtsbooks.com · WTS Seminary</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /puritan-resources -->
+</section>
+
+
+<!-- REFORMERS -->
+<section class="section section--light" id="reformers">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Biographical Profiles</p>
+      <h2 class="section-title">The Reformers</h2>
+      <p class="section-desc">Men of God who risked exile, imprisonment, and death to recover the Gospel of grace from centuries of obscurity. Their courage still echoes in every faithful pulpit.</p>
+    </div>
+    <div class="reformers-grid">
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/wycliffe.png" alt="John Wycliffe" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Pre-Reformation</span>
+              <h3 class="reformer-card-front-name">John Wycliffe</h3>
+              <span class="reformer-card-front-dates">c. 1320–1384 · England</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Pre-Reformation</span>
+              <h3 class="reformer-card-back-name">John Wycliffe</h3>
+              <span class="reformer-card-back-dates">c. 1320–1384 · England</span>
+              <p class="reformer-card-back-desc">The &ldquo;Morning Star of the Reformation&rdquo; challenged papal authority and translated the Bible into Middle English so that plowboys might read God's Word for themselves.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/John_Wycliffe" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/hus.png" alt="Jan Hus" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Pre-Reformation</span>
+              <h3 class="reformer-card-front-name">Jan Hus</h3>
+              <span class="reformer-card-front-dates">c. 1369–1415 · Bohemia</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Pre-Reformation</span>
+              <h3 class="reformer-card-back-name">Jan Hus</h3>
+              <span class="reformer-card-back-dates">c. 1369–1415 · Bohemia</span>
+              <p class="reformer-card-back-desc">Czech theologian and martyr who was burned at the Council of Constance. A century later Luther declared, &ldquo;We are all Hussites without knowing it.&rdquo;</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/Jan_Hus" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/tyndale.png" alt="William Tyndale" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">English Reformation</span>
+              <h3 class="reformer-card-front-name">William Tyndale</h3>
+              <span class="reformer-card-front-dates">c. 1494–1536 · England</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">English Reformation</span>
+              <h3 class="reformer-card-back-name">William Tyndale</h3>
+              <span class="reformer-card-back-dates">c. 1494–1536 · England</span>
+              <p class="reformer-card-back-desc">Produced the first printed New Testament in English from original Greek sources. Strangled and burned at the stake, his dying prayer was answered within a year.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/William_Tyndale" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/luther.png" alt="Martin Luther" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">German Reformation</span>
+              <h3 class="reformer-card-front-name">Martin Luther</h3>
+              <span class="reformer-card-front-dates">1483–1546 · Germany</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">German Reformation</span>
+              <h3 class="reformer-card-back-name">Martin Luther</h3>
+              <span class="reformer-card-back-dates">1483–1546 · Germany</span>
+              <p class="reformer-card-back-desc">Augustinian monk whose 95 Theses (1517) broke open the Reformation. His German Bible translation gave a nation its language and its faith.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/Martin_Luther" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/zwingli.png" alt="Ulrich Zwingli" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Swiss Reformation</span>
+              <h3 class="reformer-card-front-name">Ulrich Zwingli</h3>
+              <span class="reformer-card-front-dates">1484–1531 · Switzerland</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Swiss Reformation</span>
+              <h3 class="reformer-card-back-name">Ulrich Zwingli</h3>
+              <span class="reformer-card-back-dates">1484–1531 · Switzerland</span>
+              <p class="reformer-card-back-desc">Led the Reformation in Zurich by preaching through entire books of the Bible. Died on the battlefield defending Protestant cantons at Kappel.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/Huldrych_Zwingli" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/calvin.png" alt="John Calvin" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Reformed Theology</span>
+              <h3 class="reformer-card-front-name">John Calvin</h3>
+              <span class="reformer-card-front-dates">1509–1564 · France/Geneva</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Reformed Theology</span>
+              <h3 class="reformer-card-back-name">John Calvin</h3>
+              <span class="reformer-card-back-dates">1509–1564 · France/Geneva</span>
+              <p class="reformer-card-back-desc">The great systematizer of Reformed theology. His <em>Institutes of the Christian Religion</em> remains the most influential work of Protestant theology ever written.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/John_Calvin" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/knox.png" alt="John Knox" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Scottish Reformation</span>
+              <h3 class="reformer-card-front-name">John Knox</h3>
+              <span class="reformer-card-front-dates">c. 1514–1572 · Scotland</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Scottish Reformation</span>
+              <h3 class="reformer-card-back-name">John Knox</h3>
+              <span class="reformer-card-back-dates">c. 1514–1572 · Scotland</span>
+              <p class="reformer-card-back-desc">Brought Calvinism to Scotland and founded Presbyterianism. Queen Mary of Scots famously declared she feared Knox's prayers more than a foreign army.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/John_Knox" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/edwards.png" alt="Jonathan Edwards" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">First Great Awakening</span>
+              <h3 class="reformer-card-front-name">Jonathan Edwards</h3>
+              <span class="reformer-card-front-dates">1703–1758 · America</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">First Great Awakening</span>
+              <h3 class="reformer-card-back-name">Jonathan Edwards</h3>
+              <span class="reformer-card-back-dates">1703–1758 · America</span>
+              <p class="reformer-card-back-desc">America's greatest theologian-philosopher. His revival preaching sparked the First Great Awakening, and his <em>Religious Affections</em> remains the definitive anatomy of true conversion.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/Jonathan_Edwards_(theologian)" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/spurgeon.png" alt="Charles Spurgeon" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Victorian Era</span>
+              <h3 class="reformer-card-front-name">Charles Spurgeon</h3>
+              <span class="reformer-card-front-dates">1834–1892 · England</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Victorian Era</span>
+              <h3 class="reformer-card-back-name">Charles Spurgeon</h3>
+              <span class="reformer-card-back-dates">1834–1892 · England</span>
+              <p class="reformer-card-back-desc">The &ldquo;Prince of Preachers.&rdquo; Preached to over ten million souls in his lifetime. His 63 volumes of sermons remain the most widely read preaching in church history.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://en.wikipedia.org/wiki/Charles_Spurgeon" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/warfield.png" alt="B.B. Warfield" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Old Princeton</span>
+              <h3 class="reformer-card-front-name">B.B. Warfield</h3>
+              <span class="reformer-card-front-dates">1851–1921 · America</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Old Princeton</span>
+              <h3 class="reformer-card-back-name">B.B. Warfield</h3>
+              <span class="reformer-card-back-dates">1851–1921 · America</span>
+              <p class="reformer-card-back-desc">Princeton Seminary's formidable defender of biblical inerrancy. His writings on inspiration, Calvinism, and soteriology remain standard references in Reformed scholarship.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://banneroftruth.org/us/about/banner-authors/b-b-warfield/" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/sproul.png" alt="R.C. Sproul" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Modern Reformed</span>
+              <h3 class="reformer-card-front-name">R.C. Sproul</h3>
+              <span class="reformer-card-front-dates">1939–2017 · America</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Modern Reformed</span>
+              <h3 class="reformer-card-back-name">R.C. Sproul</h3>
+              <span class="reformer-card-back-dates">1939–2017 · America</span>
+              <p class="reformer-card-back-desc">Founder of Ligonier Ministries and one of the 20th century's most gifted theological communicators. His landmark book <em>The Holiness of God</em> has transformed countless lives.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://learn.ligonier.org/articles/r-c-sproul-man-called-god" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="reformer-card reveal">
+        <div class="reformer-card-inner">
+          <div class="reformer-card-front">
+            <img class="reformer-card-img" src="./assets/macarthur.png" alt="John MacArthur" loading="lazy">
+            <div class="reformer-card-front-info">
+              <span class="reformer-card-front-era">Modern Expository</span>
+              <h3 class="reformer-card-front-name">John MacArthur</h3>
+              <span class="reformer-card-front-dates">1939–2025 · America</span>
+            </div>
+          </div>
+          <div class="reformer-card-back">
+            <div>
+              <span class="reformer-card-back-era">Modern Expository</span>
+              <h3 class="reformer-card-back-name">John MacArthur</h3>
+              <span class="reformer-card-back-dates">1939–2025 · America</span>
+              <p class="reformer-card-back-desc">Pastor-teacher of Grace Community Church for over fifty years. Author of the MacArthur Study Bible and more than 150 books. President of The Master's Seminary.</p>
+            </div>
+            <a class="reformer-card-back-link" href="https://www.gracechurch.org/leader/macarthur/john" target="_blank" rel="noopener noreferrer">
+              Read Biography
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LUTHER QUOTE -->
+<div class="quote-banner">
+  <blockquote>
+    <p class="quote-text">&ldquo;Unless I am convinced by the testimony of the Holy Scriptures or by evident reason — for I can believe neither pope nor councils alone, since it is clear that they have erred repeatedly — I am bound by the Scriptures I have quoted, and my conscience is captive to the Word of God.&rdquo;</p>
+    <cite class="quote-source">— Martin Luther, Diet of Worms, 1521</cite>
+  </blockquote>
+</div>
+
+<!-- RESOURCES (TABBED) -->
+<section class="section section--light" id="resources">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Learning &amp; Worship</p>
+      <h2 class="section-title">Online Resources</h2>
+      <p class="section-desc">A curated treasury of digital resources for studying, hearing, and worshipping within the Reformed tradition — from premier ministries to ancient texts made freely available.</p>
+    </div>
+
+    <div class="resource-tabs" role="tablist">
+      <button class="resource-tab active" role="tab" aria-selected="true" data-tab="churches">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Churches &amp; Ministries
+      </button>
+      <button class="resource-tab" role="tab" aria-selected="false" data-tab="theology">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Theology
+      </button>
+      <button class="resource-tab" role="tab" aria-selected="false" data-tab="bible">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Bible Study
+      </button>
+      <button class="resource-tab" role="tab" aria-selected="false" data-tab="history">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        History
+      </button>
+    </div>
+
+    <div id="panel-churches" class="resource-panel active" role="tabpanel">
+      <a class="resource-card" href="https://www.gty.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="resource-card-title">Grace to You</h3>
+        <p class="resource-card-desc">John MacArthur's ministry — home to over 3,500 free audio sermons covering the entire New Testament verse-by-verse, plus the MacArthur New Testament Commentary series.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> gty.org</span>
+      </a>
+      <a class="resource-card" href="https://www.ligonier.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg></div>
+        <h3 class="resource-card-title">Ligonier Ministries</h3>
+        <p class="resource-card-desc">R.C. Sproul's enduring legacy. Thousands of free teaching series, the Tabletalk devotional magazine, and the Ask Ligonier feature for theological questions.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> ligonier.org</span>
+      </a>
+      <a class="resource-card" href="https://www.gracechurch.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3 class="resource-card-title">Grace Community Church</h3>
+        <p class="resource-card-desc">The home church of John MacArthur in Sun Valley, CA. Live stream, sermon archives, discipleship resources, and information about The Master's University.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> gracechurch.org</span>
+      </a>
+      <a class="resource-card" href="https://www.desiringgod.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3 class="resource-card-title">Desiring God</h3>
+        <p class="resource-card-desc">John Piper's ministry. Thousands of free articles, sermons, and books grounded in Christian Hedonism and the sovereign grace of God.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> desiringgod.org</span>
+      </a>
+      <a class="resource-card" href="https://www.alliancenet.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3 class="resource-card-title">Alliance of Confessing Evangelicals</h3>
+        <p class="resource-card-desc">A coalition of Reformed pastors and scholars. Hosts the Modern Reformation journal, the White Horse Inn podcast, and numerous teaching ministries.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> alliancenet.org</span>
+      </a>
+      <a class="resource-card" href="https://www.pcaac.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <h3 class="resource-card-title">Presbyterian Church in America</h3>
+        <p class="resource-card-desc">A major confessional Presbyterian denomination committed to the Westminster Standards and robust Reformed theology and missions.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> pcaac.org</span>
+      </a>
+    </div>
+
+    <div id="panel-theology" class="resource-panel" role="tabpanel">
+      <a class="resource-card" href="https://www.monergism.com" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3 class="resource-card-title">Monergism</h3>
+        <p class="resource-card-desc">The largest free repository of Reformed and Calvinist theology online. Thousands of articles, books, and audio by the finest Reformed scholars ever assembled.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> monergism.com</span>
+      </a>
+      <a class="resource-card" href="https://www.ccel.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3 class="resource-card-title">Christian Classics Ethereal Library</h3>
+        <p class="resource-card-desc">Free access to thousands of classic Christian books — Calvin's Institutes, Luther's Works, Puritan writings, church fathers, and centuries of devotional literature.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> ccel.org</span>
+      </a>
+      <a class="resource-card" href="https://www.thegospelcoalition.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg></div>
+        <h3 class="resource-card-title">The Gospel Coalition</h3>
+        <p class="resource-card-desc">A network of Reformed evangelical churches. Thousands of articles, conference messages, and resources from Tim Keller, D.A. Carson, Kevin DeYoung, and many others.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> thegospelcoalition.org</span>
+      </a>
+      <a class="resource-card" href="https://www.reformed.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></div>
+        <h3 class="resource-card-title">The Reformed Reader</h3>
+        <p class="resource-card-desc">Extensive archive of Reformed theology articles, book reviews, and links to confessional Reformed resources including creeds and catechisms.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> reformed.org</span>
+      </a>
+    </div>
+
+    <div id="panel-bible" class="resource-panel" role="tabpanel">
+      <a class="resource-card" href="https://www.biblegateway.com" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3 class="resource-card-title">Bible Gateway</h3>
+        <p class="resource-card-desc">Online Bible in over 200 versions. Search the Reformation-era KJV, the ESV, NASB, and even Luther's German Bible — with powerful search and cross-reference tools.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> biblegateway.com</span>
+      </a>
+      <a class="resource-card" href="https://www.esv.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3 class="resource-card-title">ESV Bible Online</h3>
+        <p class="resource-card-desc">The English Standard Version — a word-for-word translation widely used in Reformed churches worldwide. Free reading plans, audio Bible, and study notes.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> esv.org</span>
+      </a>
+      <a class="resource-card" href="https://www.blueletterbible.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+        <h3 class="resource-card-title">Blue Letter Bible</h3>
+        <p class="resource-card-desc">The gold standard for original language study. Hebrew and Greek lexicons, Strong's concordance, and commentaries by Spurgeon, Calvin, and Matthew Henry.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> blueletterbible.org</span>
+      </a>
+      <a class="resource-card" href="https://www.studylight.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
+        <h3 class="resource-card-title">Study Light</h3>
+        <p class="resource-card-desc">Cross-references, parallel Bibles, and 40+ commentaries. Excellent for Reformed expository study with access to classic Puritan and Reformation commentators.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> studylight.org</span>
+      </a>
+    </div>
+
+    <div id="panel-history" class="resource-panel" role="tabpanel">
+      <a class="resource-card" href="https://grokipedia.com/page/Protestant_Reformation" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3 class="resource-card-title">Britannica — The Reformation</h3>
+        <p class="resource-card-desc">Encyclopædia Britannica's comprehensive historical overview, with scholarly articles on every key reformer, event, and theological controversy of the 16th century.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> britannica.com</span>
+      </a>
+      <a class="resource-card" href="https://www.spurgeon.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div>
+        <h3 class="resource-card-title">Spurgeon Archive</h3>
+        <p class="resource-card-desc">The most comprehensive Spurgeon resource on the internet. Over 3,000 sermons, his autobiography, letters, and the complete Metropolitan Tabernacle Pulpit.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> spurgeon.org</span>
+      </a>
+      <a class="resource-card" href="https://edwards.yale.edu" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">Jonathan Edwards Center at Yale</h3>
+        <p class="resource-card-desc">The complete digital works of Jonathan Edwards — including unpublished sermons, personal notebooks, and the definitive 26-volume Yale edition online.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> edwards.yale.edu</span>
+      </a>
+      <a class="resource-card" href="https://archive.org/search?query=protestant+reformation" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3 class="resource-card-title">Internet Archive — Reformation</h3>
+        <p class="resource-card-desc">Thousands of freely downloadable books on the Protestant Reformation — rare 16th-century texts, Luther's complete works, and Puritan classics.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> archive.org</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SEMINARIES -->
+<section class="section section--alt" id="seminaries">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Academic Formation</p>
+      <h2 class="section-title">Seminaries &amp; Schools of Theology</h2>
+      <p class="section-desc">Institutions faithful to the Reformed tradition, training the next generation of pastors, scholars, and missionaries to handle the Word of truth rightly.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--space-5);">
+      <a class="resource-card reveal" href="https://www.tms.edu" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">The Master's Seminary</h3>
+        <p class="resource-card-desc">Founded by John MacArthur in Sun Valley, CA. World-class graduate theological education focused on expository preaching and Reformed biblical theology.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> tms.edu</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.rts.edu" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">Reformed Theological Seminary</h3>
+        <p class="resource-card-desc">Multi-campus Reformed seminary committed to the Westminster Standards. A premier institution for confessional Presbyterian and Reformed ministry training.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> rts.edu</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.wts.edu" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">Westminster Theological Seminary</h3>
+        <p class="resource-card-desc">Philadelphia's bastion of Reformed orthodoxy, founded by J. Gresham Machen. Home of presuppositional apologetics and the biblical theology tradition of Geerhardus Vos.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> wts.edu</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.calvinseminary.edu" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">Calvin Theological Seminary</h3>
+        <p class="resource-card-desc">Seminary of the Christian Reformed Church in Grand Rapids, MI. A distinguished tradition in Dutch Reformed theology, named for John Calvin himself.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> calvinseminary.edu</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.covenantseminary.edu" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">Covenant Theological Seminary</h3>
+        <p class="resource-card-desc">Official seminary of the PCA in St. Louis. Emphasizes covenant theology and hermeneutics in service of confessional Presbyterian ministry and world missions.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> covenantseminary.edu</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.sbts.edu" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">Southern Baptist Theological Seminary</h3>
+        <p class="resource-card-desc">Under Al Mohler's leadership, returned to confessional Reformed Baptist theology. One of the most consequential theological turnarounds in modern evangelical history.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> sbts.edu</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONFESSIONS -->
+<section class="section section--light" id="confessions">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Standards of Faith</p>
+      <h2 class="section-title">Confessions &amp; Catechisms</h2>
+      <p class="section-desc">The great confessional documents of the Reformation — summaries of biblical doctrine forged in the crucible of controversy, persecution, and profound theological inquiry.</p>
+    </div>
+    <div class="confessions-grid">
+      <a class="confession-card reveal" href="https://grokipedia.com/page/Augsburg_Confession" target="_blank" rel="noopener noreferrer">
+        <span class="confession-year">1530</span>
+        <h3 class="confession-name">Augsburg Confession</h3>
+        <span class="confession-tradition">Lutheran</span>
+        <p class="confession-desc">The primary Lutheran confessional document, presented to Emperor Charles V. Authored principally by Philip Melanchthon, it defined Lutheran doctrine against Rome.</p>
+      </a>
+      <a class="confession-card reveal" href="https://grokipedia.com/page/Heidelberg_Catechism" target="_blank" rel="noopener noreferrer">
+        <span class="confession-year">1563</span>
+        <h3 class="confession-name">Heidelberg Catechism</h3>
+        <span class="confession-tradition">Reformed / Continental</span>
+        <p class="confession-desc">One of the most beloved catechisms of the Reformation, opening with the question: &ldquo;What is your only comfort in life and death?&rdquo;</p>
+      </a>
+      <a class="confession-card reveal" href="https://grokipedia.com/page/Canons_of_Dort" target="_blank" rel="noopener noreferrer">
+        <span class="confession-year">1619</span>
+        <h3 class="confession-name">Canons of Dort</h3>
+        <span class="confession-tradition">Reformed / TULIP</span>
+        <p class="confession-desc">The Synod of Dort answered Arminius with the five doctrines of grace: Total Depravity, Unconditional Election, Definite Atonement, Irresistible Grace, Perseverance of the Saints.</p>
+      </a>
+      <a class="confession-card reveal" href="https://grokipedia.com/page/Westminster_Confession_of_Faith" target="_blank" rel="noopener noreferrer">
+        <span class="confession-year">1646</span>
+        <h3 class="confession-name">Westminster Confession</h3>
+        <span class="confession-tradition">Reformed / Presbyterian</span>
+        <p class="confession-desc">The most thorough expression of Calvinist theology ever produced. Adopted by the Church of Scotland, PCA, OPC, and confessional Presbyterians worldwide.</p>
+      </a>
+      <a class="confession-card reveal" href="https://grokipedia.com/page/Westminster_Shorter_Catechism" target="_blank" rel="noopener noreferrer">
+        <span class="confession-year">1647</span>
+        <h3 class="confession-name">Westminster Shorter Catechism</h3>
+        <span class="confession-tradition">Reformed / Presbyterian</span>
+        <p class="confession-desc">Opens with the immortal question: &ldquo;What is the chief end of man?&rdquo; — &ldquo;To glorify God and enjoy him forever.&rdquo; A masterwork memorized by generations of Reformed Christians.</p>
+      </a>
+      <a class="confession-card reveal" href="https://www.the1689confession.com/" target="_blank" rel="noopener noreferrer">
+        <span class="confession-year">1689</span>
+        <h3 class="confession-name">London Baptist Confession</h3>
+        <span class="confession-tradition">Reformed / Baptist</span>
+        <p class="confession-desc">The definitive confession of Reformed Baptists, closely paralleling the Westminster Confession while insisting on believer's baptism by immersion.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE -->
+<section class="section section--alt" id="youtube">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Visual Learning</p>
+      <h2 class="section-title">Video &amp; Sermon Resources</h2>
+      <p class="section-desc">YouTube channels, sermon archives, and documentary series for studying the Reformation and Reformed theology through the power of video.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--space-5);">
+      <a class="resource-card reveal" href="https://www.youtube.com/@ligonier" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:var(--color-accent)"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+        <h3 class="resource-card-title">Ligonier Ministries</h3>
+        <p class="resource-card-desc">R.C. Sproul's complete video library — Reformation history, systematic theology, apologetics, and the essential doctrines of grace taught with unmatched clarity.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> YouTube · @ligonier</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.youtube.com/@gracetoyou" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:var(--color-accent)"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+        <h3 class="resource-card-title">Grace to You</h3>
+        <p class="resource-card-desc">John MacArthur's official channel. Expository sermon clips, full messages, Q&amp;A sessions, and conference teachings from the late John MacArthur, one of the foremost Reformed Bible teachers of our time.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> YouTube · @gracetoyou</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.youtube.com/@desiringGod" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:var(--color-accent)"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+        <h3 class="resource-card-title">Desiring God</h3>
+        <p class="resource-card-desc">John Piper's channel. Sermon excerpts, Ask Pastor John episodes, and conference talks grounded in the Reformed Baptist tradition of sovereign grace.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> YouTube · @desiringGod</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.youtube.com/@CrossExamined" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" style="color:var(--color-accent)"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></div>
+        <h3 class="resource-card-title">CrossExamined</h3>
+        <p class="resource-card-desc">Frank Turek's apologetics channel. Historical and theological arguments for the Reformation's core claims, answered with clarity and academic rigor.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> YouTube · @CrossExamined</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="section section--light" id="research">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-eyebrow">Scholarly Study</p>
+      <h2 class="section-title">Research Institutions</h2>
+      <p class="section-desc">Academic centers, digital archives, and scholarly institutions dedicated to the rigorous historical and theological study of the Protestant Reformation.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--space-5);">
+            <a class="resource-card reveal" href="https://grokipedia.com/page/Protestant_Reformation" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3 class="resource-card-title">Grokipedia</h3>
+        <p class="resource-card-desc">xAI&rsquo;s encyclopedia of the Protestant Reformation and the Puritans &mdash; biographies of the Reformers, articles on the Five Solas, confessions, and the history of the movement.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> grokipedia.com</span>
+      </a>
+<a class="resource-card reveal" href="https://edwards.yale.edu" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">Jonathan Edwards Center — Yale</h3>
+        <p class="resource-card-desc">The definitive academic resource for the study of Jonathan Edwards, housing his complete works in the landmark 26-volume Yale edition.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> edwards.yale.edu</span>
+      </a>
+      <a class="resource-card reveal" href="https://research.kuleuven.be/portal/en/unit/50000118" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3 class="resource-card-title">KU Leuven — Reformation Studies</h3>
+        <p class="resource-card-desc">Belgium's premier research university with a distinguished Faculty of Theology providing cutting-edge Reformation historical research and manuscript studies.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> kuleuven.be</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.ccel.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <h3 class="resource-card-title">Christian Classics Ethereal Library</h3>
+        <p class="resource-card-desc">Calvin College's digital library hosting thousands of primary source texts — the definitive free online archive of Reformation and Puritan primary sources.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> ccel.org</span>
+      </a>
+      <a class="resource-card reveal" href="https://www.archive.org" target="_blank" rel="noopener noreferrer">
+        <div class="resource-card-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <h3 class="resource-card-title">Internet Archive</h3>
+        <p class="resource-card-desc">The world's largest digital library of historical texts, hosting rare Reformation-era manuscripts, Luther's complete works, and centuries of Protestant scholarship.</p>
+        <span class="resource-card-url"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg> archive.org</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <a href="#" class="footer-brand-logo">
+        <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+          <rect x="12" y="2" width="4" height="24" rx="1" fill="#b8922e"/>
+          <rect x="4" y="9" width="20" height="4" rx="1" fill="#b8922e"/>
+        </svg>
+        <span class="footer-brand-name">Reformation Portal</span>
+      </a>
+      <p class="footer-brand-desc">A digital treasury for the study of the Protestant Reformation and the Puritans — from its pre-Reformation forerunners through the great Puritan divines to the present inheritors of Reformed theology.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#timeline">Interactive Timeline</a></li>
+        <li><a href="#reformers">The Reformers</a></li>
+        <li><a href="#puritans">The Ten Puritans</a></li>
+                <li><a href="#five-solas">The Five Solas</a></li>
+        <li><a href="#confessions">Confessions</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#resources">Churches &amp; Ministries</a></li>
+        <li><a href="#seminaries">Seminaries</a></li>
+        <li><a href="#youtube">Video &amp; Sermons</a></li>
+        <li><a href="#research">Research Institutions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-bottom-text">The Protestant Reformation &amp; Puritans Portal — <em>Sola Scriptura · Sola Fide · Sola Gratia · Solus Christus · Soli Deo Gloria</em></p>
+    <p class="footer-credit"><a href="https://www.perplexity.ai/computer" target="_blank" rel="noopener noreferrer">Created with Perplexity Computer</a></p>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+(function () {
+  'use strict';
+
+  // ---- Tab switching ----
+  document.querySelectorAll('.resource-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.resource-tab').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.resource-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const panel = document.getElementById('panel-' + tab.dataset.tab);
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  // ---- Scroll reveal ----
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
+
+  // ---- Timeline: entry animation ----
+  const tlItems = document.querySelectorAll('.timeline-item');
+  tlItems.forEach((item, i) => {
+    item.style.opacity = '0';
+    item.style.transform = 'translateY(12px)';
+    setTimeout(() => {
+      item.style.transition = 'opacity 450ms ease, transform 450ms ease';
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
+    }, 300 + i * 55);
+  });
+
+  // ---- Timeline tooltip: edge-clamp ----
+  tlItems.forEach(item => {
+    const tooltip = item.querySelector('.tl-tooltip');
+    if (!tooltip) return;
+    const clampTooltip = () => {
+      const rect = item.getBoundingClientRect();
+      const containerRect = item.closest('.timeline-container').getBoundingClientRect();
+      const ttW = 180;
+      const half = ttW / 2;
+      const center = rect.left + rect.width / 2;
+      const minX = containerRect.left + 8;
+      const maxX = containerRect.right - 8;
+      let shift = 0;
+      if (center - half < minX) shift = -(center - half - minX);
+      else if (center + half > maxX) shift = -(center + half - maxX);
+      tooltip.style.transform = `translateX(calc(-50% + ${shift}px)) translateY(0) scale(1)`;
+    };
+    item.addEventListener('mouseenter', () => { requestAnimationFrame(clampTooltip); });
+    item.addEventListener('mouseleave', () => { tooltip.style.transform = ''; });
+  });
+
+  // ---- PARALLAX ENGINE ----
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    const heroBg     = document.querySelector('.hero-bg');
+    const lutherRose = document.querySelector('.luther-rose');
+    const sectionHeaders = document.querySelectorAll('.section-header');
+    const solaCards  = document.querySelectorAll('.sola-card');
+
+    let ticking = false;
+
+    function applyParallax() {
+      const scrollY = window.scrollY;
+
+      // Hero background — moves up gently
+      if (heroBg) {
+        heroBg.style.transform = `translateY(${scrollY * 0.3}px) scale(1.08)`;
+      }
+
+      // Luther Rose — slow counter-scroll + gentle rotation
+      if (lutherRose) {
+        const roseY   = scrollY * 0.15;
+        const roseRot = scrollY * 0.008;
+        lutherRose.style.transform =
+          `translate(-50%, calc(-50% + ${roseY}px)) rotate(${roseRot}deg)`;
+      }
+
+      // Section headers — subtle upward drift
+      sectionHeaders.forEach(header => {
+        const rect = header.getBoundingClientRect();
+        const vh   = window.innerHeight;
+        if (rect.top < vh && rect.bottom > 0) {
+          const progress = (vh - rect.top) / (vh + rect.height);
+          const drift = (progress - 0.5) * -24;
+          header.style.transform = `translateY(${drift}px)`;
+        }
+      });
+
+      // Sola cards — staggered depth
+      solaCards.forEach((card, i) => {
+        const rect = card.getBoundingClientRect();
+        const vh   = window.innerHeight;
+        if (rect.top < vh && rect.bottom > 0) {
+          const depth   = 0.025 + (i % 3) * 0.012;
+          const centerY = rect.top + rect.height / 2 - vh / 2;
+          card.style.transform = `translateY(${centerY * depth * -1}px)`;
+        }
+      });
+
+      const fiveSolas = document.getElementById('five-solas');
+      const studyVid  = document.querySelector('#five-solas .solas-study-bg video');
+      if (fiveSolas) {
+        const rect = fiveSolas.getBoundingClientRect();
+        const vh   = window.innerHeight;
+        const inView = rect.top < vh && rect.bottom > 0;
+        if (lutherRose) lutherRose.style.opacity = inView ? '0' : '';
+        if (studyVid && inView) {
+          const progress = (vh - rect.top) / (vh + rect.height);
+          studyVid.style.transform = `translateY(${(progress - 0.5) * 48}px) scale(1.14)`;
+        }
+      }
+
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(applyParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    applyParallax();
+  }
+
+})();
+</script>
+
+<!-- BOOK MODAL -->
+<script src="./solas-content.js"></script>
+<script src="./book-modal.js"></script>
+
+
+  <!-- Mobile tap-to-flip for reformer cards -->
+  <script>
+  (function() {
+    if (window.matchMedia('(hover: none)').matches) {
+      document.querySelectorAll('.reformer-card').forEach(function(card) {
+        card.addEventListener('click', function(e) {
+          if (e.target.closest('.reformer-card-back-link')) return;
+          e.preventDefault();
+          card.classList.toggle('flipped');
+        });
+      });
+    }
+  })();
+  </script>
+<script src="./hymn-player.js"></script>
+</body>
+</html>

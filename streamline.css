@@ -1,0 +1,79 @@
+/* ============================================================
+   STREAMLINE — cleaner layout layer (loaded last on both editions).
+   Reuses each edition's existing palette variables; no new colors.
+   ============================================================ */
+
+/* Navigation: one tidy row on desktop (logo · links · edition toggle) */
+.site-nav { padding: 10px var(--space-6); }
+.nav-inner {
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.nav-logo { flex: 0 0 auto; font-size: 0.8rem; }
+.nav-links { gap: 0; flex: 1 1 auto; }
+.nav-links a {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  padding: 6px 9px;
+}
+.theme-toggle, .theme-toggle-dark {
+  position: static;
+  flex: 0 0 auto;
+  padding: 6px 12px;
+  font-size: 0.6rem;
+  box-shadow: none;
+}
+@media (min-width: 1100px) {
+  .nav-inner { flex-wrap: nowrap; max-width: 1280px; }
+  .nav-links { flex-wrap: nowrap; }
+}
+@media (max-width: 1099px) {
+  .nav-inner { justify-content: center; }
+}
+
+/* Calmer rhythm: slightly tighter sections and headers */
+.section { padding-top: clamp(3rem, 5vw, 4.5rem); padding-bottom: clamp(3rem, 5vw, 4.5rem); }
+.section-header { margin-bottom: var(--space-10); }
+.section-desc { max-width: 64ch; margin-left: auto; margin-right: auto; }
+
+/* Cards: consistent radius, softer chrome, aligned rows */
+.reformer-card, .resource-card, .confession-card, .sola-card, .puritan-res-panel {
+  border-radius: var(--radius-lg);
+}
+.solas-grid, .reformers-grid, .confessions-grid { align-items: stretch; }
+.sola-card { height: 100%; }
+.resource-tabs { gap: var(--space-2); margin-bottom: var(--space-8); }
+
+/* Hymn player: bottom-right, compact, theme-aware */
+.hymn-player {
+  left: auto;
+  right: max(14px, env(safe-area-inset-right, 0px));
+  max-width: min(290px, calc(100vw - 28px));
+  padding: 6px 14px 6px 6px;
+}
+.hymn-player-btn { width: 36px; height: 36px; }
+
+/* ---------- Light edition fixes (legibility) ---------- */
+.edition-light .hero-bg::after {
+  background:
+    radial-gradient(ellipse 60% 55% at 50% 46%, rgba(247,244,239,0.82) 0%, rgba(247,244,239,0.35) 70%, transparent 100%),
+    linear-gradient(to bottom, rgba(243,240,234,0.25) 0%, rgba(243,240,234,0.55) 100%);
+}
+.edition-light .hero-verse,
+.edition-light .hero-eyebrow { color: var(--color-text-muted); }
+
+.edition-light .puritan-res-panel {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  box-shadow: 0 2px 14px rgba(60, 40, 10, 0.06);
+}
+.edition-light .puritan-res-panel-title { color: var(--color-accent-dim); }
+.edition-light .puritan-res-panel-heading { color: var(--color-text-bright); }
+.edition-light .puritan-res-link {
+  background: var(--color-bg);
+  border-color: var(--color-border);
+}
+.edition-light .puritan-res-link:hover { background: var(--color-surface-2); }
+.edition-light .puritan-res-link-name { color: var(--color-text); }
+.edition-light .puritan-res-link-desc { color: var(--color-text-muted); }
+.edition-light .puritan-res-link-badge { color: var(--color-accent-dim); }

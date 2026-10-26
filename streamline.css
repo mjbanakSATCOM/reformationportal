@@ -77,3 +77,7 @@
 .edition-light .puritan-res-link-name { color: var(--color-text); }
 .edition-light .puritan-res-link-desc { color: var(--color-text-muted); }
 .edition-light .puritan-res-link-badge { color: var(--color-accent-dim); }
+
+/* Light page: darken faint hero quote and "& the Puritans" heading */
+.edition-light .hero-verse { color: var(--color-text); opacity: 1; }
+.edition-light .hero-subtitle-puritans { color: var(--color-accent-dim); opacity: 1; }
